@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 95.500 ns
+From           : tile:t1|regD:Q1|q
+To             : DISP1[4]
+From Clock     : SW[0]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case Minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 29.600 ns
+From           : tile:t15|regD:Q1|q
+To             : DISP4_DP
+From Clock     : SW[0]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SW[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.55 MHz ( period = 64.300 ns )
+From           : tile:t1|regD:Q1|q
+To             : tile:t15|regD:Q0|q
+From Clock     : SW[0]
+To Clock       : SW[0]
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

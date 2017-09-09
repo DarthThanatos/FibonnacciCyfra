@@ -1,0 +1,331 @@
+Analysis & Synthesis report for UP2_TOP
+Thu Mar 03 12:12:02 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Inverted Register Statistics
+  9. Port Connectivity Checks: "tile:t1|regD:Q0"
+ 10. Port Connectivity Checks: "tile:t1|regD:Q1"
+ 11. Port Connectivity Checks: "start:s1|regD:Q0"
+ 12. Port Connectivity Checks: "start:s1|regD:Q1"
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Mar 03 12:12:02 2016   ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name               ; UP2_TOP                                 ;
+; Top-level Entity Name       ; UP2_TOP                                 ;
+; Family                      ; FLEX10K                                 ;
+; Total logic elements        ; 92                                      ;
+; Total pins                  ; 31                                      ;
+; Total memory bits           ; 0                                       ;
++-----------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                    ;
++----------------------------------------------------------------+-----------------+---------------+
+; Option                                                         ; Setting         ; Default Value ;
++----------------------------------------------------------------+-----------------+---------------+
+; Device                                                         ; EPF10K70RC240-4 ;               ;
+; Top-level entity name                                          ; UP2_TOP         ; UP2_TOP       ;
+; Family name                                                    ; FLEX10K         ; Stratix       ;
+; Use Generated Physical Constraints File                        ; Off             ;               ;
+; Use smart compilation                                          ; Off             ; Off           ;
+; Create Debugging Nodes for IP Cores                            ; Off             ; Off           ;
+; Preserve fewer node names                                      ; On              ; On            ;
+; Disable OpenCore Plus hardware evaluation                      ; Off             ; Off           ;
+; Verilog Version                                                ; Verilog_2001    ; Verilog_2001  ;
+; VHDL Version                                                   ; VHDL93          ; VHDL93        ;
+; State Machine Processing                                       ; Auto            ; Auto          ;
+; Safe State Machine                                             ; Off             ; Off           ;
+; Extract Verilog State Machines                                 ; On              ; On            ;
+; Extract VHDL State Machines                                    ; On              ; On            ;
+; Ignore Verilog initial constructs                              ; Off             ; Off           ;
+; Iteration limit for constant Verilog loops                     ; 5000            ; 5000          ;
+; Iteration limit for non-constant Verilog loops                 ; 250             ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On              ; On            ;
+; Parallel Synthesis                                             ; Off             ; Off           ;
+; NOT Gate Push-Back                                             ; On              ; On            ;
+; Power-Up Don't Care                                            ; On              ; On            ;
+; Remove Redundant Logic Cells                                   ; Off             ; Off           ;
+; Remove Duplicate Registers                                     ; On              ; On            ;
+; Ignore CARRY Buffers                                           ; Off             ; Off           ;
+; Ignore CASCADE Buffers                                         ; Off             ; Off           ;
+; Ignore GLOBAL Buffers                                          ; Off             ; Off           ;
+; Ignore ROW GLOBAL Buffers                                      ; Off             ; Off           ;
+; Ignore LCELL Buffers                                           ; Off             ; Off           ;
+; Ignore SOFT Buffers                                            ; On              ; On            ;
+; Limit AHDL Integers to 32 Bits                                 ; Off             ; Off           ;
+; Auto Implement in ROM                                          ; Off             ; Off           ;
+; Optimization Technique                                         ; Area            ; Area          ;
+; Carry Chain Length                                             ; 32              ; 32            ;
+; Cascade Chain Length                                           ; 2               ; 2             ;
+; Auto Carry Chains                                              ; On              ; On            ;
+; Auto Open-Drain Pins                                           ; On              ; On            ;
+; Auto ROM Replacement                                           ; On              ; On            ;
+; Auto RAM Replacement                                           ; On              ; On            ;
+; Auto Clock Enable Replacement                                  ; On              ; On            ;
+; Strict RAM Replacement                                         ; Off             ; Off           ;
+; Auto Resource Sharing                                          ; Off             ; Off           ;
+; Allow Any RAM Size For Recognition                             ; Off             ; Off           ;
+; Allow Any ROM Size For Recognition                             ; Off             ; Off           ;
+; Use LogicLock Constraints during Resource Balancing            ; On              ; On            ;
+; Ignore translate_off and synthesis_off directives              ; Off             ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report             ; On              ; On            ;
+; HDL message level                                              ; Level2          ; Level2        ;
+; Suppress Register Optimization Related Messages                ; Off             ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100             ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100             ; 100           ;
+; Block Design Naming                                            ; Auto            ; Auto          ;
+; Synthesis Effort                                               ; Auto            ; Auto          ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On              ; On            ;
+; Analysis & Synthesis Message Level                             ; Medium          ; Medium        ;
++----------------------------------------------------------------+-----------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                          ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+
+; UP2_TOP.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/UP2_TOP.v ;
+; dek7seg.v                        ; yes             ; User Verilog HDL File  ; C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/dek7seg.v ;
+; tile.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/tile.v    ;
+; start.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/start.v   ;
+; regD.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/regD.v    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------------+------------+
+; Resource                       ; Usage      ;
++--------------------------------+------------+
+; Total logic elements           ; 92         ;
+; Total combinational functions  ; 77         ;
+;     -- Total 4-input functions ; 28         ;
+;     -- Total 3-input functions ; 45         ;
+;     -- Total 2-input functions ; 3          ;
+;     -- Total 1-input functions ; 1          ;
+;     -- Total 0-input functions ; 0          ;
+; Total registers                ; 34         ;
+; I/O pins                       ; 31         ;
+; Maximum fan-out node           ; SW[0]      ;
+; Maximum fan-out                ; 34         ;
+; Total fan-out                  ; 364        ;
+; Average fan-out                ; 2.96       ;
++--------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name       ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+; |UP2_TOP                   ; 92 (0)      ; 34           ; 0           ; 31   ; 58 (0)       ; 15 (0)            ; 19 (0)           ; 0 (0)           ; 0 (0)      ; |UP2_TOP                  ; work         ;
+;    |dek7seg:d1|            ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|dek7seg:d1       ; work         ;
+;    |dek7seg:d2|            ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|dek7seg:d2       ; work         ;
+;    |dek7seg:d3|            ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|dek7seg:d3       ; work         ;
+;    |dek7seg:d4|            ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|dek7seg:d4       ; work         ;
+;    |start:s1|              ; 4 (2)       ; 4            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 4 (2)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|start:s1         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|start:s1|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|start:s1|regD:Q1 ; work         ;
+;    |tile:t10|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t10         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t10|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t10|regD:Q1 ; work         ;
+;    |tile:t11|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t11         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t11|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t11|regD:Q1 ; work         ;
+;    |tile:t12|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t12         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t12|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t12|regD:Q1 ; work         ;
+;    |tile:t13|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t13         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t13|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t13|regD:Q1 ; work         ;
+;    |tile:t14|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t14         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t14|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t14|regD:Q1 ; work         ;
+;    |tile:t15|              ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t15         ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t15|regD:Q0 ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t15|regD:Q1 ; work         ;
+;    |tile:t1|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t1          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t1|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t1|regD:Q1  ; work         ;
+;    |tile:t2|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t2          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t2|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t2|regD:Q1  ; work         ;
+;    |tile:t3|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t3          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t3|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t3|regD:Q1  ; work         ;
+;    |tile:t4|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t4          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t4|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t4|regD:Q1  ; work         ;
+;    |tile:t5|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t5          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t5|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t5|regD:Q1  ; work         ;
+;    |tile:t6|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t6          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t6|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t6|regD:Q1  ; work         ;
+;    |tile:t7|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t7          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t7|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t7|regD:Q1  ; work         ;
+;    |tile:t8|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t8          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t8|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t8|regD:Q1  ; work         ;
+;    |tile:t9|               ; 4 (2)       ; 2            ; 0           ; 0    ; 2 (2)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t9          ; work         ;
+;       |regD:Q0|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t9|regD:Q0  ; work         ;
+;       |regD:Q1|            ; 1 (1)       ; 1            ; 0           ; 0    ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |UP2_TOP|tile:t9|regD:Q1  ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; start:s1|regD:Q1|q                     ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tile:t1|regD:Q0"                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tile:t1|regD:Q1"                                                                                                                            ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "start:s1|regD:Q0"                                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; set  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "start:s1|regD:Q1"                                                                                                                            ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Thu Mar 03 12:11:59 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UP2_TOP -c UP2_TOP
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(27): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(37): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(47): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(62): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(72): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(82): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(92): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(107): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(117): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(127): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(137): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(153): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(163): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(173): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at UP2_TOP.v(183): ignored dangling comma in List of Port Connections
+Info: Found 1 design units, including 1 entities, in source file UP2_TOP.v
+    Info: Found entity 1: UP2_TOP
+Info: Found 1 design units, including 1 entities, in source file d.bdf
+    Info: Found entity 1: d
+Info: Found 1 design units, including 1 entities, in source file dek7seg.v
+    Info: Found entity 1: dek7seg
+Info: Found 1 design units, including 1 entities, in source file tile.v
+    Info: Found entity 1: tile
+Info: Found 1 design units, including 1 entities, in source file start.v
+    Info: Found entity 1: start
+Info: Found 1 design units, including 1 entities, in source file regD.v
+    Info: Found entity 1: regD
+Info: Elaborating entity "UP2_TOP" for the top level hierarchy
+Info: Elaborating entity "start" for hierarchy "start:s1"
+Info: Elaborating entity "regD" for hierarchy "start:s1|regD:Q1"
+Info: Elaborating entity "tile" for hierarchy "tile:t1"
+Critical Warning (10237): Verilog HDL warning at tile.v(16): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Critical Warning (10237): Verilog HDL warning at tile.v(17): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Info: Elaborating entity "dek7seg" for hierarchy "dek7seg:d1"
+Warning: 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Registers with preset signals will power-up high
+Info: Implemented 123 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 29 output pins
+    Info: Implemented 92 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 211 megabytes
+    Info: Processing ended: Thu Mar 03 12:12:03 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+

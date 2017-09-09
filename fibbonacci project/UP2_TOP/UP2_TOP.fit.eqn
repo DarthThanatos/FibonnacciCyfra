@@ -1,0 +1,772 @@
+--E32_q is tile:t11|regD:Q0|q at LC4_D21
+--operation mode is normal
+
+E32_q_lut_out = D01L1 $ E32_q $ E42_q;
+E32_q = DFFEA(E32_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E42_q is tile:t11|regD:Q1|q at LC5_D21
+--operation mode is normal
+
+E42_q_lut_out = E32_q;
+E42_q = DFFEA(E42_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E12_q is tile:t10|regD:Q0|q at LC3_D23
+--operation mode is normal
+
+E12_q_lut_out = D9L1 $ E12_q $ E22_q;
+E12_q = DFFEA(E12_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E22_q is tile:t10|regD:Q1|q at LC5_D23
+--operation mode is normal
+
+E22_q_lut_out = E12_q;
+E22_q = DFFEA(E22_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E91_q is tile:t9|regD:Q0|q at LC6_D23
+--operation mode is normal
+
+E91_q_lut_out = D8L1 $ E91_q $ E02_q;
+E91_q = DFFEA(E91_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E02_q is tile:t9|regD:Q1|q at LC7_D23
+--operation mode is normal
+
+E02_q_lut_out = E91_q;
+E02_q = DFFEA(E02_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E71_q is tile:t8|regD:Q0|q at LC3_D25
+--operation mode is normal
+
+E71_q_lut_out = D7L1 $ E71_q $ E81_q;
+E71_q = DFFEA(E71_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E81_q is tile:t8|regD:Q1|q at LC5_D25
+--operation mode is normal
+
+E81_q_lut_out = E71_q;
+E81_q = DFFEA(E81_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E51_q is tile:t7|regD:Q0|q at LC6_D25
+--operation mode is normal
+
+E51_q_lut_out = D6L1 $ E51_q $ E61_q;
+E51_q = DFFEA(E51_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E61_q is tile:t7|regD:Q1|q at LC7_D25
+--operation mode is normal
+
+E61_q_lut_out = E51_q;
+E61_q = DFFEA(E61_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E31_q is tile:t6|regD:Q0|q at LC2_D24
+--operation mode is normal
+
+E31_q_lut_out = D5L1 $ E31_q $ E41_q;
+E31_q = DFFEA(E31_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E41_q is tile:t6|regD:Q1|q at LC4_D24
+--operation mode is normal
+
+E41_q_lut_out = E31_q;
+E41_q = DFFEA(E41_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E11_q is tile:t5|regD:Q0|q at LC6_D24
+--operation mode is normal
+
+E11_q_lut_out = D4L1 $ E11_q $ E21_q;
+E11_q = DFFEA(E11_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E21_q is tile:t5|regD:Q1|q at LC7_D24
+--operation mode is normal
+
+E21_q_lut_out = E11_q;
+E21_q = DFFEA(E21_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E9_q is tile:t4|regD:Q0|q at LC2_D22
+--operation mode is normal
+
+E9_q_lut_out = D3L1 $ E9_q $ E01_q;
+E9_q = DFFEA(E9_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E01_q is tile:t4|regD:Q1|q at LC3_D22
+--operation mode is normal
+
+E01_q_lut_out = E9_q;
+E01_q = DFFEA(E01_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E7_q is tile:t3|regD:Q0|q at LC4_D22
+--operation mode is normal
+
+E7_q_lut_out = D2L1 $ E7_q $ E8_q;
+E7_q = DFFEA(E7_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E8_q is tile:t3|regD:Q1|q at LC5_D22
+--operation mode is normal
+
+E8_q_lut_out = E7_q;
+E8_q = DFFEA(E8_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E5_q is tile:t2|regD:Q0|q at LC2_D20
+--operation mode is normal
+
+E5_q_lut_out = E6_q $ E5_q $ D1L1;
+E5_q = DFFEA(E5_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E6_q is tile:t2|regD:Q1|q at LC3_D20
+--operation mode is normal
+
+E6_q_lut_out = E5_q;
+E6_q = DFFEA(E6_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E3_q is tile:t1|regD:Q0|q at LC4_D20
+--operation mode is normal
+
+E3_q_lut_out = E3_q $ E4_q $ C1_carry;
+E3_q = DFFEA(E3_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E4_q is tile:t1|regD:Q1|q at LC5_D20
+--operation mode is normal
+
+E4_q_lut_out = E3_q;
+E4_q = DFFEA(E4_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--C1_carry is start:s1|carry at LC1_D19
+--operation mode is normal
+
+C1_carry_lut_out = E1_q & !E2_q;
+C1_carry = DFFEA(C1_carry_lut_out, SW[0], , , , , );
+
+
+--D1L1 is tile:t1|carry~55 at LC7_D20
+--operation mode is normal
+
+D1L1 = E3_q & (E4_q # C1_carry) # !E3_q & E4_q & C1_carry;
+
+
+--D2L1 is tile:t2|carry~119 at LC1_D20
+--operation mode is normal
+
+D2L1 = E5_q & (E6_q # D1L1) # !E5_q & E6_q & D1L1;
+
+
+--D3L1 is tile:t3|carry~173 at LC7_D22
+--operation mode is normal
+
+D3L1 = E7_q & (E8_q # D2L1) # !E7_q & E8_q & D2L1;
+
+
+--D4L1 is tile:t4|carry~55 at LC1_D22
+--operation mode is normal
+
+D4L1 = E9_q & (E01_q # D3L1) # !E9_q & E01_q & D3L1;
+
+
+--D5L1 is tile:t5|carry~55 at LC8_D24
+--operation mode is normal
+
+D5L1 = E11_q & (E21_q # D4L1) # !E11_q & E21_q & D4L1;
+
+
+--D6L1 is tile:t6|carry~55 at LC1_D24
+--operation mode is normal
+
+D6L1 = E31_q & (E41_q # D5L1) # !E31_q & E41_q & D5L1;
+
+
+--D7L1 is tile:t7|carry~55 at LC8_D25
+--operation mode is normal
+
+D7L1 = E51_q & (E61_q # D6L1) # !E51_q & E61_q & D6L1;
+
+
+--D8L1 is tile:t8|carry~55 at LC1_D25
+--operation mode is normal
+
+D8L1 = E71_q & (E81_q # D7L1) # !E71_q & E81_q & D7L1;
+
+
+--D9L1 is tile:t9|carry~55 at LC8_D23
+--operation mode is normal
+
+D9L1 = E91_q & (E02_q # D8L1) # !E91_q & E02_q & D8L1;
+
+
+--D01L1 is tile:t10|carry~55 at LC1_D23
+--operation mode is normal
+
+D01L1 = E12_q & (E22_q # D9L1) # !E12_q & E22_q & D9L1;
+
+
+--D11L1 is tile:t11|carry~55 at LC6_D21
+--operation mode is normal
+
+D11L1 = E32_q & (E42_q # D01L1) # !E32_q & E42_q & D01L1;
+
+
+--E52_q is tile:t12|regD:Q0|q at LC7_D21
+--operation mode is normal
+
+E52_q_lut_out = D11L1 $ E52_q $ E62_q;
+E52_q = DFFEA(E52_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E62_q is tile:t12|regD:Q1|q at LC8_D21
+--operation mode is normal
+
+E62_q_lut_out = E52_q;
+E62_q = DFFEA(E62_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--D21_sum is tile:t12|sum at LC3_D21
+--operation mode is normal
+
+D21_sum = D11L1 $ E52_q $ E62_q;
+
+
+--D21L1 is tile:t12|carry~55 at LC1_D21
+--operation mode is normal
+
+D21L1 = E52_q & (E62_q # D11L1) # !E52_q & E62_q & D11L1;
+
+
+--E72_q is tile:t13|regD:Q0|q at LC5_D19
+--operation mode is normal
+
+E72_q_lut_out = D21L1 $ E72_q $ E82_q;
+E72_q = DFFEA(E72_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E82_q is tile:t13|regD:Q1|q at LC6_D19
+--operation mode is normal
+
+E82_q_lut_out = E72_q;
+E82_q = DFFEA(E82_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--D31_sum is tile:t13|sum at LC3_D19
+--operation mode is normal
+
+D31_sum = D21L1 $ E72_q $ E82_q;
+
+
+--D31L1 is tile:t13|carry~55 at LC2_D19
+--operation mode is normal
+
+D31L1 = E72_q & (E82_q # D21L1) # !E72_q & E82_q & D21L1;
+
+
+--E92_q is tile:t14|regD:Q0|q at LC3_D18
+--operation mode is normal
+
+E92_q_lut_out = D31L1 $ E92_q $ E03_q;
+E92_q = DFFEA(E92_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E03_q is tile:t14|regD:Q1|q at LC5_D18
+--operation mode is normal
+
+E03_q_lut_out = E92_q;
+E03_q = DFFEA(E03_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--D41_sum is tile:t14|sum at LC2_D18
+--operation mode is normal
+
+D41_sum = D31L1 $ E92_q $ E03_q;
+
+
+--D41L1 is tile:t14|carry~55 at LC6_D18
+--operation mode is normal
+
+D41L1 = E92_q & (E03_q # D31L1) # !E92_q & E03_q & D31L1;
+
+
+--E13_q is tile:t15|regD:Q0|q at LC7_D18
+--operation mode is normal
+
+E13_q_lut_out = D41L1 $ E13_q $ E23_q;
+E13_q = DFFEA(E13_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E23_q is tile:t15|regD:Q1|q at LC8_D18
+--operation mode is normal
+
+E23_q_lut_out = E13_q;
+E23_q = DFFEA(E23_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--D51_sum is tile:t15|sum at LC1_D18
+--operation mode is normal
+
+D51_sum = D41L1 $ E13_q $ E23_q;
+
+
+--B4L1 is dek7seg:d4|reduce_or~14 at LC1_D43
+--operation mode is normal
+
+B4L1 = D21_sum & (D51_sum # D31_sum $ D41_sum) # !D21_sum & (D31_sum # D41_sum $ D51_sum);
+
+
+--B4L2 is dek7seg:d4|reduce_or~16 at LC2_D39
+--operation mode is normal
+
+B4L2 = D21_sum & (D51_sum $ (D31_sum # !D41_sum)) # !D21_sum & D31_sum & !D41_sum & !D51_sum;
+
+
+--B4L3 is dek7seg:d4|reduce_or~18 at LC4_D43
+--operation mode is normal
+
+B4L3 = D31_sum & D21_sum & !D51_sum # !D31_sum & (D41_sum & !D51_sum # !D41_sum & D21_sum);
+
+
+--B4L4 is dek7seg:d4|reduce_or~20 at LC2_G42
+--operation mode is normal
+
+B4L4 = D31_sum & (D21_sum & D41_sum # !D21_sum & !D41_sum & D51_sum) # !D31_sum & !D51_sum & (D21_sum $ D41_sum);
+
+
+--B4L5 is dek7seg:d4|reduce_or~22 at LC1_G38
+--operation mode is normal
+
+B4L5 = D41_sum & D51_sum & (D31_sum # !D21_sum) # !D41_sum & !D21_sum & D31_sum & !D51_sum;
+
+
+--B4L6 is dek7seg:d4|reduce_or~24 at LC2_G38
+--operation mode is normal
+
+B4L6 = D31_sum & (D21_sum & D51_sum # !D21_sum & D41_sum) # !D31_sum & D41_sum & (D21_sum $ D51_sum);
+
+
+--B4L7 is dek7seg:d4|reduce_or~26 at LC2_D40
+--operation mode is normal
+
+B4L7 = D41_sum & !D31_sum & (D21_sum $ !D51_sum) # !D41_sum & D21_sum & (D31_sum $ !D51_sum);
+
+
+--D8_sum is tile:t8|sum at LC4_D25
+--operation mode is normal
+
+D8_sum = D7L1 $ E71_q $ E81_q;
+
+
+--D9_sum is tile:t9|sum at LC2_D23
+--operation mode is normal
+
+D9_sum = D8L1 $ E91_q $ E02_q;
+
+
+--D01_sum is tile:t10|sum at LC4_D23
+--operation mode is normal
+
+D01_sum = D9L1 $ E12_q $ E22_q;
+
+
+--D11_sum is tile:t11|sum at LC2_D21
+--operation mode is normal
+
+D11_sum = D01L1 $ E32_q $ E42_q;
+
+
+--B3L1 is dek7seg:d3|reduce_or~14 at LC3_B31
+--operation mode is normal
+
+B3L1 = D8_sum & (D11_sum # D9_sum $ D01_sum) # !D8_sum & (D9_sum # D01_sum $ D11_sum);
+
+
+--B3L2 is dek7seg:d3|reduce_or~16 at LC1_B31
+--operation mode is normal
+
+B3L2 = D8_sum & (D11_sum $ (D9_sum # !D01_sum)) # !D8_sum & D9_sum & !D01_sum & !D11_sum;
+
+
+--B3L3 is dek7seg:d3|reduce_or~18 at LC2_B33
+--operation mode is normal
+
+B3L3 = D9_sum & D8_sum & !D11_sum # !D9_sum & (D01_sum & !D11_sum # !D01_sum & D8_sum);
+
+
+--B3L4 is dek7seg:d3|reduce_or~20 at LC2_B31
+--operation mode is normal
+
+B3L4 = D9_sum & (D8_sum & D01_sum # !D8_sum & !D01_sum & D11_sum) # !D9_sum & !D11_sum & (D8_sum $ D01_sum);
+
+
+--B3L5 is dek7seg:d3|reduce_or~22 at LC4_B27
+--operation mode is normal
+
+B3L5 = D01_sum & D11_sum & (D9_sum # !D8_sum) # !D01_sum & !D8_sum & D9_sum & !D11_sum;
+
+
+--B3L6 is dek7seg:d3|reduce_or~24 at LC1_B25
+--operation mode is normal
+
+B3L6 = D9_sum & (D8_sum & D11_sum # !D8_sum & D01_sum) # !D9_sum & D01_sum & (D8_sum $ D11_sum);
+
+
+--B3L7 is dek7seg:d3|reduce_or~26 at LC4_B30
+--operation mode is normal
+
+B3L7 = D01_sum & !D9_sum & (D8_sum $ !D11_sum) # !D01_sum & D8_sum & (D9_sum $ !D11_sum);
+
+
+--D4_sum is tile:t4|sum at LC8_D22
+--operation mode is normal
+
+D4_sum = D3L1 $ E9_q $ E01_q;
+
+
+--D5_sum is tile:t5|sum at LC5_D24
+--operation mode is normal
+
+D5_sum = D4L1 $ E11_q $ E21_q;
+
+
+--D6_sum is tile:t6|sum at LC3_D24
+--operation mode is normal
+
+D6_sum = D5L1 $ E31_q $ E41_q;
+
+
+--D7_sum is tile:t7|sum at LC2_D25
+--operation mode is normal
+
+D7_sum = D6L1 $ E51_q $ E61_q;
+
+
+--B2L1 is dek7seg:d2|reduce_or~14 at LC2_C21
+--operation mode is normal
+
+B2L1 = D4_sum & (D7_sum # D5_sum $ D6_sum) # !D4_sum & (D5_sum # D6_sum $ D7_sum);
+
+
+--B2L2 is dek7seg:d2|reduce_or~16 at LC4_C19
+--operation mode is normal
+
+B2L2 = D4_sum & (D7_sum $ (D5_sum # !D6_sum)) # !D4_sum & D5_sum & !D6_sum & !D7_sum;
+
+
+--B2L3 is dek7seg:d2|reduce_or~18 at LC3_C21
+--operation mode is normal
+
+B2L3 = D5_sum & D4_sum & !D7_sum # !D5_sum & (D6_sum & !D7_sum # !D6_sum & D4_sum);
+
+
+--B2L4 is dek7seg:d2|reduce_or~20 at LC1_C21
+--operation mode is normal
+
+B2L4 = D5_sum & (D4_sum & D6_sum # !D4_sum & !D6_sum & D7_sum) # !D5_sum & !D7_sum & (D4_sum $ D6_sum);
+
+
+--B2L5 is dek7seg:d2|reduce_or~22 at LC1_C18
+--operation mode is normal
+
+B2L5 = D6_sum & D7_sum & (D5_sum # !D4_sum) # !D6_sum & !D4_sum & D5_sum & !D7_sum;
+
+
+--B2L6 is dek7seg:d2|reduce_or~24 at LC2_C15
+--operation mode is normal
+
+B2L6 = D5_sum & (D4_sum & D7_sum # !D4_sum & D6_sum) # !D5_sum & D6_sum & (D4_sum $ D7_sum);
+
+
+--B2L7 is dek7seg:d2|reduce_or~26 at LC2_C20
+--operation mode is normal
+
+B2L7 = D6_sum & !D5_sum & (D4_sum $ !D7_sum) # !D6_sum & D4_sum & (D5_sum $ !D7_sum);
+
+
+--C1_sum is start:s1|sum at LC4_D19
+--operation mode is normal
+
+C1_sum_lut_out = E1_q $ !E2_q;
+C1_sum = DFFEA(C1_sum_lut_out, SW[0], , , , , );
+
+
+--D1L2 is tile:t1|sum~16 at LC8_D20
+--operation mode is normal
+
+D1L2 = E3_q $ E4_q $ C1_carry;
+
+
+--D2_sum is tile:t2|sum at LC6_D20
+--operation mode is normal
+
+D2_sum = E6_q $ E5_q $ D1L1;
+
+
+--D3_sum is tile:t3|sum at LC6_D22
+--operation mode is normal
+
+D3_sum = D2L1 $ E7_q $ E8_q;
+
+
+--B1L1 is dek7seg:d1|reduce_or~14 at LC1_H14
+--operation mode is normal
+
+B1L1 = C1_sum & (D3_sum # D1L2 $ D2_sum) # !C1_sum & (D1L2 # D2_sum $ D3_sum);
+
+
+--B1L2 is dek7seg:d1|reduce_or~16 at LC2_H12
+--operation mode is normal
+
+B1L2 = C1_sum & (D3_sum $ (D1L2 # !D2_sum)) # !C1_sum & D1L2 & !D2_sum & !D3_sum;
+
+
+--B1L3 is dek7seg:d1|reduce_or~18 at LC4_H16
+--operation mode is normal
+
+B1L3 = D1L2 & C1_sum & !D3_sum # !D1L2 & (D2_sum & !D3_sum # !D2_sum & C1_sum);
+
+
+--B1L4 is dek7seg:d1|reduce_or~20 at LC1_H12
+--operation mode is normal
+
+B1L4 = D1L2 & (C1_sum & D2_sum # !C1_sum & !D2_sum & D3_sum) # !D1L2 & !D3_sum & (C1_sum $ D2_sum);
+
+
+--B1L5 is dek7seg:d1|reduce_or~22 at LC1_B10
+--operation mode is normal
+
+B1L5 = D2_sum & D3_sum & (D1L2 # !C1_sum) # !D2_sum & !C1_sum & D1L2 & !D3_sum;
+
+
+--B1L6 is dek7seg:d1|reduce_or~24 at LC4_B10
+--operation mode is normal
+
+B1L6 = D1L2 & (C1_sum & D3_sum # !C1_sum & D2_sum) # !D1L2 & D2_sum & (C1_sum $ D3_sum);
+
+
+--B1L7 is dek7seg:d1|reduce_or~26 at LC4_H12
+--operation mode is normal
+
+B1L7 = D2_sum & !D1L2 & (C1_sum $ !D3_sum) # !D2_sum & C1_sum & (D1L2 $ !D3_sum);
+
+
+--D51L1 is tile:t15|carry~51 at LC4_D18
+--operation mode is normal
+
+D51L1 = E13_q & (E23_q # D41L1) # !E13_q & E23_q & D41L1;
+
+
+--E1_q is start:s1|regD:Q0|q at LC7_D19
+--operation mode is normal
+
+E1_q_lut_out = E1_q $ !E2_q;
+E1_q = DFFEA(E1_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--E2_q is start:s1|regD:Q1|q at LC8_D19
+--operation mode is normal
+
+E2_q_lut_out = !E1_q;
+E2_q = DFFEA(E2_q_lut_out, SW[0], !SW[1], , , , );
+
+
+--SW[0] is SW[0] at PIN_84
+--operation mode is input
+
+SW[0] = INPUT();
+
+
+--SW[1] is SW[1] at PIN_83
+--operation mode is input
+
+SW[1] = INPUT();
+
+
+--DISP1[6] is DISP1[6] at PIN_230
+--operation mode is output
+
+DISP1[6] = OUTPUT(B4L1);
+
+
+--DISP1[5] is DISP1[5] at PIN_228
+--operation mode is output
+
+DISP1[5] = OUTPUT(!B4L2);
+
+
+--DISP1[4] is DISP1[4] at PIN_231
+--operation mode is output
+
+DISP1[4] = OUTPUT(!B4L3);
+
+
+--DISP1[3] is DISP1[3] at PIN_229
+--operation mode is output
+
+DISP1[3] = OUTPUT(!B4L4);
+
+
+--DISP1[2] is DISP1[2] at PIN_226
+--operation mode is output
+
+DISP1[2] = OUTPUT(!B4L5);
+
+
+--DISP1[1] is DISP1[1] at PIN_225
+--operation mode is output
+
+DISP1[1] = OUTPUT(!B4L6);
+
+
+--DISP1[0] is DISP1[0] at PIN_227
+--operation mode is output
+
+DISP1[0] = OUTPUT(!B4L7);
+
+
+--DISP2[6] is DISP2[6] at PIN_219
+--operation mode is output
+
+DISP2[6] = OUTPUT(B3L1);
+
+
+--DISP2[5] is DISP2[5] at PIN_217
+--operation mode is output
+
+DISP2[5] = OUTPUT(!B3L2);
+
+
+--DISP2[4] is DISP2[4] at PIN_220
+--operation mode is output
+
+DISP2[4] = OUTPUT(!B3L3);
+
+
+--DISP2[3] is DISP2[3] at PIN_218
+--operation mode is output
+
+DISP2[3] = OUTPUT(!B3L4);
+
+
+--DISP2[2] is DISP2[2] at PIN_214
+--operation mode is output
+
+DISP2[2] = OUTPUT(!B3L5);
+
+
+--DISP2[1] is DISP2[1] at PIN_208
+--operation mode is output
+
+DISP2[1] = OUTPUT(!B3L6);
+
+
+--DISP2[0] is DISP2[0] at PIN_215
+--operation mode is output
+
+DISP2[0] = OUTPUT(!B3L7);
+
+
+--DISP3[6] is DISP3[6] at PIN_202
+--operation mode is output
+
+DISP3[6] = OUTPUT(B2L1);
+
+
+--DISP3[5] is DISP3[5] at PIN_200
+--operation mode is output
+
+DISP3[5] = OUTPUT(!B2L2);
+
+
+--DISP3[4] is DISP3[4] at PIN_203
+--operation mode is output
+
+DISP3[4] = OUTPUT(!B2L3);
+
+
+--DISP3[3] is DISP3[3] at PIN_201
+--operation mode is output
+
+DISP3[3] = OUTPUT(!B2L4);
+
+
+--DISP3[2] is DISP3[2] at PIN_198
+--operation mode is output
+
+DISP3[2] = OUTPUT(!B2L5);
+
+
+--DISP3[1] is DISP3[1] at PIN_196
+--operation mode is output
+
+DISP3[1] = OUTPUT(!B2L6);
+
+
+--DISP3[0] is DISP3[0] at PIN_199
+--operation mode is output
+
+DISP3[0] = OUTPUT(!B2L7);
+
+
+--DISP4[6] is DISP4[6] at PIN_193
+--operation mode is output
+
+DISP4[6] = OUTPUT(B1L1);
+
+
+--DISP4[5] is DISP4[5] at PIN_191
+--operation mode is output
+
+DISP4[5] = OUTPUT(!B1L2);
+
+
+--DISP4[4] is DISP4[4] at PIN_194
+--operation mode is output
+
+DISP4[4] = OUTPUT(!B1L3);
+
+
+--DISP4[3] is DISP4[3] at PIN_192
+--operation mode is output
+
+DISP4[3] = OUTPUT(!B1L4);
+
+
+--DISP4[2] is DISP4[2] at PIN_188
+--operation mode is output
+
+DISP4[2] = OUTPUT(!B1L5);
+
+
+--DISP4[1] is DISP4[1] at PIN_187
+--operation mode is output
+
+DISP4[1] = OUTPUT(!B1L6);
+
+
+--DISP4[0] is DISP4[0] at PIN_190
+--operation mode is output
+
+DISP4[0] = OUTPUT(!B1L7);
+
+
+--DISP4_DP is DISP4_DP at PIN_158
+--operation mode is output
+
+DISP4_DP = OUTPUT(D51L1);
+
+

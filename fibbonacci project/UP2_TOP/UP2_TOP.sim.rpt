@@ -1,0 +1,424 @@
+Simulator report for UP2_TOP
+Thu Mar 03 12:13:10 2016
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 261 nodes    ;
+; Simulation Coverage         ;      98.47 % ;
+; Total Number of Transitions ; 20064        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; FLEX10K      ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      98.47 % ;
+; Total nodes checked                                 ; 261          ;
+; Total output ports checked                          ; 261          ;
+; Total output ports with complete 1/0-value coverage ; 257          ;
+; Total output ports with no 1/0-value coverage       ; 3            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 3            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |UP2_TOP|SW[0]                  ; |UP2_TOP|SW[0]                  ; out              ;
+; |UP2_TOP|DISP1[0]               ; |UP2_TOP|DISP1[0]               ; pin_out          ;
+; |UP2_TOP|DISP1[1]               ; |UP2_TOP|DISP1[1]               ; pin_out          ;
+; |UP2_TOP|DISP1[2]               ; |UP2_TOP|DISP1[2]               ; pin_out          ;
+; |UP2_TOP|DISP1[3]               ; |UP2_TOP|DISP1[3]               ; pin_out          ;
+; |UP2_TOP|DISP1[4]               ; |UP2_TOP|DISP1[4]               ; pin_out          ;
+; |UP2_TOP|DISP1[5]               ; |UP2_TOP|DISP1[5]               ; pin_out          ;
+; |UP2_TOP|DISP1[6]               ; |UP2_TOP|DISP1[6]               ; pin_out          ;
+; |UP2_TOP|DISP2[0]               ; |UP2_TOP|DISP2[0]               ; pin_out          ;
+; |UP2_TOP|DISP2[1]               ; |UP2_TOP|DISP2[1]               ; pin_out          ;
+; |UP2_TOP|DISP2[2]               ; |UP2_TOP|DISP2[2]               ; pin_out          ;
+; |UP2_TOP|DISP2[3]               ; |UP2_TOP|DISP2[3]               ; pin_out          ;
+; |UP2_TOP|DISP2[4]               ; |UP2_TOP|DISP2[4]               ; pin_out          ;
+; |UP2_TOP|DISP2[5]               ; |UP2_TOP|DISP2[5]               ; pin_out          ;
+; |UP2_TOP|DISP2[6]               ; |UP2_TOP|DISP2[6]               ; pin_out          ;
+; |UP2_TOP|DISP3[0]               ; |UP2_TOP|DISP3[0]               ; pin_out          ;
+; |UP2_TOP|DISP3[1]               ; |UP2_TOP|DISP3[1]               ; pin_out          ;
+; |UP2_TOP|DISP3[2]               ; |UP2_TOP|DISP3[2]               ; pin_out          ;
+; |UP2_TOP|DISP3[3]               ; |UP2_TOP|DISP3[3]               ; pin_out          ;
+; |UP2_TOP|DISP3[4]               ; |UP2_TOP|DISP3[4]               ; pin_out          ;
+; |UP2_TOP|DISP3[5]               ; |UP2_TOP|DISP3[5]               ; pin_out          ;
+; |UP2_TOP|DISP3[6]               ; |UP2_TOP|DISP3[6]               ; pin_out          ;
+; |UP2_TOP|DISP4[0]               ; |UP2_TOP|DISP4[0]               ; pin_out          ;
+; |UP2_TOP|DISP4[1]               ; |UP2_TOP|DISP4[1]               ; pin_out          ;
+; |UP2_TOP|DISP4[2]               ; |UP2_TOP|DISP4[2]               ; pin_out          ;
+; |UP2_TOP|DISP4[3]               ; |UP2_TOP|DISP4[3]               ; pin_out          ;
+; |UP2_TOP|DISP4[4]               ; |UP2_TOP|DISP4[4]               ; pin_out          ;
+; |UP2_TOP|DISP4[5]               ; |UP2_TOP|DISP4[5]               ; pin_out          ;
+; |UP2_TOP|DISP4[6]               ; |UP2_TOP|DISP4[6]               ; pin_out          ;
+; |UP2_TOP|DISP4_DP               ; |UP2_TOP|DISP4_DP               ; pin_out          ;
+; |UP2_TOP|dek7seg:d4|WideOr0     ; |UP2_TOP|dek7seg:d4|WideOr0     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr1     ; |UP2_TOP|dek7seg:d4|WideOr1     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr2     ; |UP2_TOP|dek7seg:d4|WideOr2     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr3     ; |UP2_TOP|dek7seg:d4|WideOr3     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr4     ; |UP2_TOP|dek7seg:d4|WideOr4     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr5     ; |UP2_TOP|dek7seg:d4|WideOr5     ; out0             ;
+; |UP2_TOP|dek7seg:d4|WideOr6     ; |UP2_TOP|dek7seg:d4|WideOr6     ; out0             ;
+; |UP2_TOP|tile:t15|sum~0         ; |UP2_TOP|tile:t15|sum~0         ; out0             ;
+; |UP2_TOP|tile:t15|sum           ; |UP2_TOP|tile:t15|sum           ; out0             ;
+; |UP2_TOP|tile:t15|carry~0       ; |UP2_TOP|tile:t15|carry~0       ; out0             ;
+; |UP2_TOP|tile:t15|carry~1       ; |UP2_TOP|tile:t15|carry~1       ; out0             ;
+; |UP2_TOP|tile:t15|carry~2       ; |UP2_TOP|tile:t15|carry~2       ; out0             ;
+; |UP2_TOP|tile:t15|carry~3       ; |UP2_TOP|tile:t15|carry~3       ; out0             ;
+; |UP2_TOP|tile:t15|carry         ; |UP2_TOP|tile:t15|carry         ; out0             ;
+; |UP2_TOP|tile:t15|regD:Q0|q     ; |UP2_TOP|tile:t15|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t15|regD:Q1|q     ; |UP2_TOP|tile:t15|regD:Q1|q     ; regout           ;
+; |UP2_TOP|tile:t14|sum~0         ; |UP2_TOP|tile:t14|sum~0         ; out0             ;
+; |UP2_TOP|tile:t14|sum           ; |UP2_TOP|tile:t14|sum           ; out0             ;
+; |UP2_TOP|tile:t14|carry~0       ; |UP2_TOP|tile:t14|carry~0       ; out0             ;
+; |UP2_TOP|tile:t14|carry~1       ; |UP2_TOP|tile:t14|carry~1       ; out0             ;
+; |UP2_TOP|tile:t14|carry~2       ; |UP2_TOP|tile:t14|carry~2       ; out0             ;
+; |UP2_TOP|tile:t14|carry~3       ; |UP2_TOP|tile:t14|carry~3       ; out0             ;
+; |UP2_TOP|tile:t14|carry         ; |UP2_TOP|tile:t14|carry         ; out0             ;
+; |UP2_TOP|tile:t14|regD:Q0|q     ; |UP2_TOP|tile:t14|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t14|regD:Q1|q     ; |UP2_TOP|tile:t14|regD:Q1|q     ; regout           ;
+; |UP2_TOP|tile:t13|sum~0         ; |UP2_TOP|tile:t13|sum~0         ; out0             ;
+; |UP2_TOP|tile:t13|sum           ; |UP2_TOP|tile:t13|sum           ; out0             ;
+; |UP2_TOP|tile:t13|carry~0       ; |UP2_TOP|tile:t13|carry~0       ; out0             ;
+; |UP2_TOP|tile:t13|carry~1       ; |UP2_TOP|tile:t13|carry~1       ; out0             ;
+; |UP2_TOP|tile:t13|carry~2       ; |UP2_TOP|tile:t13|carry~2       ; out0             ;
+; |UP2_TOP|tile:t13|carry~3       ; |UP2_TOP|tile:t13|carry~3       ; out0             ;
+; |UP2_TOP|tile:t13|carry         ; |UP2_TOP|tile:t13|carry         ; out0             ;
+; |UP2_TOP|tile:t13|regD:Q0|q     ; |UP2_TOP|tile:t13|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t13|regD:Q1|q     ; |UP2_TOP|tile:t13|regD:Q1|q     ; regout           ;
+; |UP2_TOP|tile:t12|sum~0         ; |UP2_TOP|tile:t12|sum~0         ; out0             ;
+; |UP2_TOP|tile:t12|sum           ; |UP2_TOP|tile:t12|sum           ; out0             ;
+; |UP2_TOP|tile:t12|carry~0       ; |UP2_TOP|tile:t12|carry~0       ; out0             ;
+; |UP2_TOP|tile:t12|carry~1       ; |UP2_TOP|tile:t12|carry~1       ; out0             ;
+; |UP2_TOP|tile:t12|carry~2       ; |UP2_TOP|tile:t12|carry~2       ; out0             ;
+; |UP2_TOP|tile:t12|carry~3       ; |UP2_TOP|tile:t12|carry~3       ; out0             ;
+; |UP2_TOP|tile:t12|carry         ; |UP2_TOP|tile:t12|carry         ; out0             ;
+; |UP2_TOP|tile:t12|regD:Q0|q     ; |UP2_TOP|tile:t12|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t12|regD:Q1|q     ; |UP2_TOP|tile:t12|regD:Q1|q     ; regout           ;
+; |UP2_TOP|dek7seg:d3|WideOr0     ; |UP2_TOP|dek7seg:d3|WideOr0     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr1     ; |UP2_TOP|dek7seg:d3|WideOr1     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr2     ; |UP2_TOP|dek7seg:d3|WideOr2     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr3     ; |UP2_TOP|dek7seg:d3|WideOr3     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr4     ; |UP2_TOP|dek7seg:d3|WideOr4     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr5     ; |UP2_TOP|dek7seg:d3|WideOr5     ; out0             ;
+; |UP2_TOP|dek7seg:d3|WideOr6     ; |UP2_TOP|dek7seg:d3|WideOr6     ; out0             ;
+; |UP2_TOP|tile:t11|sum~0         ; |UP2_TOP|tile:t11|sum~0         ; out0             ;
+; |UP2_TOP|tile:t11|sum           ; |UP2_TOP|tile:t11|sum           ; out0             ;
+; |UP2_TOP|tile:t11|carry~0       ; |UP2_TOP|tile:t11|carry~0       ; out0             ;
+; |UP2_TOP|tile:t11|carry~1       ; |UP2_TOP|tile:t11|carry~1       ; out0             ;
+; |UP2_TOP|tile:t11|carry~2       ; |UP2_TOP|tile:t11|carry~2       ; out0             ;
+; |UP2_TOP|tile:t11|carry~3       ; |UP2_TOP|tile:t11|carry~3       ; out0             ;
+; |UP2_TOP|tile:t11|carry         ; |UP2_TOP|tile:t11|carry         ; out0             ;
+; |UP2_TOP|tile:t11|regD:Q0|q     ; |UP2_TOP|tile:t11|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t11|regD:Q1|q     ; |UP2_TOP|tile:t11|regD:Q1|q     ; regout           ;
+; |UP2_TOP|tile:t10|sum~0         ; |UP2_TOP|tile:t10|sum~0         ; out0             ;
+; |UP2_TOP|tile:t10|sum           ; |UP2_TOP|tile:t10|sum           ; out0             ;
+; |UP2_TOP|tile:t10|carry~0       ; |UP2_TOP|tile:t10|carry~0       ; out0             ;
+; |UP2_TOP|tile:t10|carry~1       ; |UP2_TOP|tile:t10|carry~1       ; out0             ;
+; |UP2_TOP|tile:t10|carry~2       ; |UP2_TOP|tile:t10|carry~2       ; out0             ;
+; |UP2_TOP|tile:t10|carry~3       ; |UP2_TOP|tile:t10|carry~3       ; out0             ;
+; |UP2_TOP|tile:t10|carry         ; |UP2_TOP|tile:t10|carry         ; out0             ;
+; |UP2_TOP|tile:t10|regD:Q0|q     ; |UP2_TOP|tile:t10|regD:Q0|q     ; regout           ;
+; |UP2_TOP|tile:t10|regD:Q1|q     ; |UP2_TOP|tile:t10|regD:Q1|q     ; regout           ;
+; |UP2_TOP|tile:t9|sum~0          ; |UP2_TOP|tile:t9|sum~0          ; out0             ;
+; |UP2_TOP|tile:t9|sum            ; |UP2_TOP|tile:t9|sum            ; out0             ;
+; |UP2_TOP|tile:t9|carry~0        ; |UP2_TOP|tile:t9|carry~0        ; out0             ;
+; |UP2_TOP|tile:t9|carry~1        ; |UP2_TOP|tile:t9|carry~1        ; out0             ;
+; |UP2_TOP|tile:t9|carry~2        ; |UP2_TOP|tile:t9|carry~2        ; out0             ;
+; |UP2_TOP|tile:t9|carry~3        ; |UP2_TOP|tile:t9|carry~3        ; out0             ;
+; |UP2_TOP|tile:t9|carry          ; |UP2_TOP|tile:t9|carry          ; out0             ;
+; |UP2_TOP|tile:t9|regD:Q0|q      ; |UP2_TOP|tile:t9|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t9|regD:Q1|q      ; |UP2_TOP|tile:t9|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t8|sum~0          ; |UP2_TOP|tile:t8|sum~0          ; out0             ;
+; |UP2_TOP|tile:t8|sum            ; |UP2_TOP|tile:t8|sum            ; out0             ;
+; |UP2_TOP|tile:t8|carry~0        ; |UP2_TOP|tile:t8|carry~0        ; out0             ;
+; |UP2_TOP|tile:t8|carry~1        ; |UP2_TOP|tile:t8|carry~1        ; out0             ;
+; |UP2_TOP|tile:t8|carry~2        ; |UP2_TOP|tile:t8|carry~2        ; out0             ;
+; |UP2_TOP|tile:t8|carry~3        ; |UP2_TOP|tile:t8|carry~3        ; out0             ;
+; |UP2_TOP|tile:t8|carry          ; |UP2_TOP|tile:t8|carry          ; out0             ;
+; |UP2_TOP|tile:t8|regD:Q0|q      ; |UP2_TOP|tile:t8|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t8|regD:Q1|q      ; |UP2_TOP|tile:t8|regD:Q1|q      ; regout           ;
+; |UP2_TOP|dek7seg:d2|WideOr0     ; |UP2_TOP|dek7seg:d2|WideOr0     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr1     ; |UP2_TOP|dek7seg:d2|WideOr1     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr2     ; |UP2_TOP|dek7seg:d2|WideOr2     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr3     ; |UP2_TOP|dek7seg:d2|WideOr3     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr4     ; |UP2_TOP|dek7seg:d2|WideOr4     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr5     ; |UP2_TOP|dek7seg:d2|WideOr5     ; out0             ;
+; |UP2_TOP|dek7seg:d2|WideOr6     ; |UP2_TOP|dek7seg:d2|WideOr6     ; out0             ;
+; |UP2_TOP|tile:t7|sum~0          ; |UP2_TOP|tile:t7|sum~0          ; out0             ;
+; |UP2_TOP|tile:t7|sum            ; |UP2_TOP|tile:t7|sum            ; out0             ;
+; |UP2_TOP|tile:t7|carry~0        ; |UP2_TOP|tile:t7|carry~0        ; out0             ;
+; |UP2_TOP|tile:t7|carry~1        ; |UP2_TOP|tile:t7|carry~1        ; out0             ;
+; |UP2_TOP|tile:t7|carry~2        ; |UP2_TOP|tile:t7|carry~2        ; out0             ;
+; |UP2_TOP|tile:t7|carry~3        ; |UP2_TOP|tile:t7|carry~3        ; out0             ;
+; |UP2_TOP|tile:t7|carry          ; |UP2_TOP|tile:t7|carry          ; out0             ;
+; |UP2_TOP|tile:t7|regD:Q0|q      ; |UP2_TOP|tile:t7|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t7|regD:Q1|q      ; |UP2_TOP|tile:t7|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t6|sum~0          ; |UP2_TOP|tile:t6|sum~0          ; out0             ;
+; |UP2_TOP|tile:t6|sum            ; |UP2_TOP|tile:t6|sum            ; out0             ;
+; |UP2_TOP|tile:t6|carry~0        ; |UP2_TOP|tile:t6|carry~0        ; out0             ;
+; |UP2_TOP|tile:t6|carry~1        ; |UP2_TOP|tile:t6|carry~1        ; out0             ;
+; |UP2_TOP|tile:t6|carry~2        ; |UP2_TOP|tile:t6|carry~2        ; out0             ;
+; |UP2_TOP|tile:t6|carry~3        ; |UP2_TOP|tile:t6|carry~3        ; out0             ;
+; |UP2_TOP|tile:t6|carry          ; |UP2_TOP|tile:t6|carry          ; out0             ;
+; |UP2_TOP|tile:t6|regD:Q0|q      ; |UP2_TOP|tile:t6|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t6|regD:Q1|q      ; |UP2_TOP|tile:t6|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t5|sum~0          ; |UP2_TOP|tile:t5|sum~0          ; out0             ;
+; |UP2_TOP|tile:t5|sum            ; |UP2_TOP|tile:t5|sum            ; out0             ;
+; |UP2_TOP|tile:t5|carry~0        ; |UP2_TOP|tile:t5|carry~0        ; out0             ;
+; |UP2_TOP|tile:t5|carry~1        ; |UP2_TOP|tile:t5|carry~1        ; out0             ;
+; |UP2_TOP|tile:t5|carry~2        ; |UP2_TOP|tile:t5|carry~2        ; out0             ;
+; |UP2_TOP|tile:t5|carry~3        ; |UP2_TOP|tile:t5|carry~3        ; out0             ;
+; |UP2_TOP|tile:t5|carry          ; |UP2_TOP|tile:t5|carry          ; out0             ;
+; |UP2_TOP|tile:t5|regD:Q0|q      ; |UP2_TOP|tile:t5|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t5|regD:Q1|q      ; |UP2_TOP|tile:t5|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t4|sum~0          ; |UP2_TOP|tile:t4|sum~0          ; out0             ;
+; |UP2_TOP|tile:t4|sum            ; |UP2_TOP|tile:t4|sum            ; out0             ;
+; |UP2_TOP|tile:t4|carry~0        ; |UP2_TOP|tile:t4|carry~0        ; out0             ;
+; |UP2_TOP|tile:t4|carry~1        ; |UP2_TOP|tile:t4|carry~1        ; out0             ;
+; |UP2_TOP|tile:t4|carry~2        ; |UP2_TOP|tile:t4|carry~2        ; out0             ;
+; |UP2_TOP|tile:t4|carry~3        ; |UP2_TOP|tile:t4|carry~3        ; out0             ;
+; |UP2_TOP|tile:t4|carry          ; |UP2_TOP|tile:t4|carry          ; out0             ;
+; |UP2_TOP|tile:t4|regD:Q0|q      ; |UP2_TOP|tile:t4|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t4|regD:Q1|q      ; |UP2_TOP|tile:t4|regD:Q1|q      ; regout           ;
+; |UP2_TOP|dek7seg:d1|WideOr0     ; |UP2_TOP|dek7seg:d1|WideOr0     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr1     ; |UP2_TOP|dek7seg:d1|WideOr1     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr2     ; |UP2_TOP|dek7seg:d1|WideOr2     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr3     ; |UP2_TOP|dek7seg:d1|WideOr3     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr4     ; |UP2_TOP|dek7seg:d1|WideOr4     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr5     ; |UP2_TOP|dek7seg:d1|WideOr5     ; out0             ;
+; |UP2_TOP|dek7seg:d1|WideOr6     ; |UP2_TOP|dek7seg:d1|WideOr6     ; out0             ;
+; |UP2_TOP|tile:t3|sum~0          ; |UP2_TOP|tile:t3|sum~0          ; out0             ;
+; |UP2_TOP|tile:t3|sum            ; |UP2_TOP|tile:t3|sum            ; out0             ;
+; |UP2_TOP|tile:t3|carry~0        ; |UP2_TOP|tile:t3|carry~0        ; out0             ;
+; |UP2_TOP|tile:t3|carry~1        ; |UP2_TOP|tile:t3|carry~1        ; out0             ;
+; |UP2_TOP|tile:t3|carry~2        ; |UP2_TOP|tile:t3|carry~2        ; out0             ;
+; |UP2_TOP|tile:t3|carry~3        ; |UP2_TOP|tile:t3|carry~3        ; out0             ;
+; |UP2_TOP|tile:t3|carry          ; |UP2_TOP|tile:t3|carry          ; out0             ;
+; |UP2_TOP|tile:t3|regD:Q0|q      ; |UP2_TOP|tile:t3|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t3|regD:Q1|q      ; |UP2_TOP|tile:t3|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t2|sum~0          ; |UP2_TOP|tile:t2|sum~0          ; out0             ;
+; |UP2_TOP|tile:t2|sum            ; |UP2_TOP|tile:t2|sum            ; out0             ;
+; |UP2_TOP|tile:t2|carry~0        ; |UP2_TOP|tile:t2|carry~0        ; out0             ;
+; |UP2_TOP|tile:t2|carry~1        ; |UP2_TOP|tile:t2|carry~1        ; out0             ;
+; |UP2_TOP|tile:t2|carry~2        ; |UP2_TOP|tile:t2|carry~2        ; out0             ;
+; |UP2_TOP|tile:t2|carry~3        ; |UP2_TOP|tile:t2|carry~3        ; out0             ;
+; |UP2_TOP|tile:t2|carry          ; |UP2_TOP|tile:t2|carry          ; out0             ;
+; |UP2_TOP|tile:t2|regD:Q0|q      ; |UP2_TOP|tile:t2|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t2|regD:Q1|q      ; |UP2_TOP|tile:t2|regD:Q1|q      ; regout           ;
+; |UP2_TOP|tile:t1|sum~0          ; |UP2_TOP|tile:t1|sum~0          ; out0             ;
+; |UP2_TOP|tile:t1|sum            ; |UP2_TOP|tile:t1|sum            ; out0             ;
+; |UP2_TOP|tile:t1|carry~1        ; |UP2_TOP|tile:t1|carry~1        ; out0             ;
+; |UP2_TOP|tile:t1|carry~2        ; |UP2_TOP|tile:t1|carry~2        ; out0             ;
+; |UP2_TOP|tile:t1|carry~3        ; |UP2_TOP|tile:t1|carry~3        ; out0             ;
+; |UP2_TOP|tile:t1|carry          ; |UP2_TOP|tile:t1|carry          ; out0             ;
+; |UP2_TOP|tile:t1|regD:Q0|q      ; |UP2_TOP|tile:t1|regD:Q0|q      ; regout           ;
+; |UP2_TOP|tile:t1|regD:Q1|q      ; |UP2_TOP|tile:t1|regD:Q1|q      ; regout           ;
+; |UP2_TOP|start:s1|carry         ; |UP2_TOP|start:s1|carry         ; regout           ;
+; |UP2_TOP|start:s1|comb~0        ; |UP2_TOP|start:s1|comb~0        ; out0             ;
+; |UP2_TOP|start:s1|sum~0         ; |UP2_TOP|start:s1|sum~0         ; out0             ;
+; |UP2_TOP|start:s1|carry~0       ; |UP2_TOP|start:s1|carry~0       ; out0             ;
+; |UP2_TOP|start:s1|sum           ; |UP2_TOP|start:s1|sum           ; regout           ;
+; |UP2_TOP|start:s1|regD:Q0|q     ; |UP2_TOP|start:s1|regD:Q0|q     ; regout           ;
+; |UP2_TOP|start:s1|regD:Q1|q     ; |UP2_TOP|start:s1|regD:Q1|q     ; regout           ;
+; |UP2_TOP|dek7seg:d4|Decoder0~0  ; |UP2_TOP|dek7seg:d4|Decoder0~0  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~1  ; |UP2_TOP|dek7seg:d4|Decoder0~1  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~2  ; |UP2_TOP|dek7seg:d4|Decoder0~2  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~3  ; |UP2_TOP|dek7seg:d4|Decoder0~3  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~4  ; |UP2_TOP|dek7seg:d4|Decoder0~4  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~5  ; |UP2_TOP|dek7seg:d4|Decoder0~5  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~6  ; |UP2_TOP|dek7seg:d4|Decoder0~6  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~7  ; |UP2_TOP|dek7seg:d4|Decoder0~7  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~8  ; |UP2_TOP|dek7seg:d4|Decoder0~8  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~9  ; |UP2_TOP|dek7seg:d4|Decoder0~9  ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~10 ; |UP2_TOP|dek7seg:d4|Decoder0~10 ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~11 ; |UP2_TOP|dek7seg:d4|Decoder0~11 ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~12 ; |UP2_TOP|dek7seg:d4|Decoder0~12 ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~13 ; |UP2_TOP|dek7seg:d4|Decoder0~13 ; out              ;
+; |UP2_TOP|dek7seg:d4|Decoder0~14 ; |UP2_TOP|dek7seg:d4|Decoder0~14 ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~0  ; |UP2_TOP|dek7seg:d3|Decoder0~0  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~1  ; |UP2_TOP|dek7seg:d3|Decoder0~1  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~2  ; |UP2_TOP|dek7seg:d3|Decoder0~2  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~3  ; |UP2_TOP|dek7seg:d3|Decoder0~3  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~4  ; |UP2_TOP|dek7seg:d3|Decoder0~4  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~5  ; |UP2_TOP|dek7seg:d3|Decoder0~5  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~6  ; |UP2_TOP|dek7seg:d3|Decoder0~6  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~7  ; |UP2_TOP|dek7seg:d3|Decoder0~7  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~8  ; |UP2_TOP|dek7seg:d3|Decoder0~8  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~9  ; |UP2_TOP|dek7seg:d3|Decoder0~9  ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~10 ; |UP2_TOP|dek7seg:d3|Decoder0~10 ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~11 ; |UP2_TOP|dek7seg:d3|Decoder0~11 ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~12 ; |UP2_TOP|dek7seg:d3|Decoder0~12 ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~13 ; |UP2_TOP|dek7seg:d3|Decoder0~13 ; out              ;
+; |UP2_TOP|dek7seg:d3|Decoder0~14 ; |UP2_TOP|dek7seg:d3|Decoder0~14 ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~0  ; |UP2_TOP|dek7seg:d2|Decoder0~0  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~1  ; |UP2_TOP|dek7seg:d2|Decoder0~1  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~2  ; |UP2_TOP|dek7seg:d2|Decoder0~2  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~3  ; |UP2_TOP|dek7seg:d2|Decoder0~3  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~4  ; |UP2_TOP|dek7seg:d2|Decoder0~4  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~5  ; |UP2_TOP|dek7seg:d2|Decoder0~5  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~6  ; |UP2_TOP|dek7seg:d2|Decoder0~6  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~7  ; |UP2_TOP|dek7seg:d2|Decoder0~7  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~8  ; |UP2_TOP|dek7seg:d2|Decoder0~8  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~9  ; |UP2_TOP|dek7seg:d2|Decoder0~9  ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~10 ; |UP2_TOP|dek7seg:d2|Decoder0~10 ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~11 ; |UP2_TOP|dek7seg:d2|Decoder0~11 ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~12 ; |UP2_TOP|dek7seg:d2|Decoder0~12 ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~13 ; |UP2_TOP|dek7seg:d2|Decoder0~13 ; out              ;
+; |UP2_TOP|dek7seg:d2|Decoder0~14 ; |UP2_TOP|dek7seg:d2|Decoder0~14 ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~0  ; |UP2_TOP|dek7seg:d1|Decoder0~0  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~1  ; |UP2_TOP|dek7seg:d1|Decoder0~1  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~2  ; |UP2_TOP|dek7seg:d1|Decoder0~2  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~3  ; |UP2_TOP|dek7seg:d1|Decoder0~3  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~4  ; |UP2_TOP|dek7seg:d1|Decoder0~4  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~5  ; |UP2_TOP|dek7seg:d1|Decoder0~5  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~7  ; |UP2_TOP|dek7seg:d1|Decoder0~7  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~8  ; |UP2_TOP|dek7seg:d1|Decoder0~8  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~9  ; |UP2_TOP|dek7seg:d1|Decoder0~9  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~10 ; |UP2_TOP|dek7seg:d1|Decoder0~10 ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~11 ; |UP2_TOP|dek7seg:d1|Decoder0~11 ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~12 ; |UP2_TOP|dek7seg:d1|Decoder0~12 ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~14 ; |UP2_TOP|dek7seg:d1|Decoder0~14 ; out              ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |UP2_TOP|SW[1]                  ; |UP2_TOP|SW[1]                  ; out              ;
+; |UP2_TOP|tile:t1|carry~0        ; |UP2_TOP|tile:t1|carry~0        ; out0             ;
+; |UP2_TOP|dek7seg:d1|Decoder0~6  ; |UP2_TOP|dek7seg:d1|Decoder0~6  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~13 ; |UP2_TOP|dek7seg:d1|Decoder0~13 ; out              ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |UP2_TOP|tile:t1|carry~0        ; |UP2_TOP|tile:t1|carry~0        ; out0             ;
+; |UP2_TOP|dek7seg:d1|Decoder0~6  ; |UP2_TOP|dek7seg:d1|Decoder0~6  ; out              ;
+; |UP2_TOP|dek7seg:d1|Decoder0~13 ; |UP2_TOP|dek7seg:d1|Decoder0~13 ; out              ;
++---------------------------------+---------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Thu Mar 03 12:13:09 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off UP2_TOP -c UP2_TOP
+Info: Using vector source file "C:/Users/Robert/Desktop/Robert/agh/cyfra/projekt/fibbonacci project/UP2_TOP/UP2_TOP.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      98.47 %
+Info: Number of transitions in simulation is 20064
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Thu Mar 03 12:13:10 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

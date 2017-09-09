@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 42.900 ns
+From           : lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[9]
+To             : DISP2[3]
+From Clock     : MCLK
+To Clock       : 
+Failed Paths   : 0
+
+Type           : Clock Setup: 'MCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 37.04 MHz ( period = 27.000 ns )
+From           : prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[3]
+To             : prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[24]
+From Clock     : MCLK
+To Clock       : MCLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

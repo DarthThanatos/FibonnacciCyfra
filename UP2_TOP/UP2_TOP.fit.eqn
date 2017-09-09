@@ -1,0 +1,1681 @@
+--E1_q[12] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[12] at LC5_H9
+--operation mode is up_dn_cntr
+
+E1_q[12]_lut_out = E1_q[12] $ E1L52;
+E1_q[12] = DFFEA(E1_q[12]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L72 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT at LC5_H9
+--operation mode is up_dn_cntr
+
+E1L72 = CARRY(E1_q[12] & E1L52);
+
+
+--E1_q[13] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[13] at LC6_H9
+--operation mode is up_dn_cntr
+
+E1_q[13]_lut_out = E1_q[13] $ E1L72;
+E1_q[13] = DFFEA(E1_q[13]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L92 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT at LC6_H9
+--operation mode is up_dn_cntr
+
+E1L92 = CARRY(E1_q[13] & E1L72);
+
+
+--E1_q[14] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[14] at LC7_H9
+--operation mode is up_dn_cntr
+
+E1_q[14]_lut_out = E1_q[14] $ E1L92;
+E1_q[14] = DFFEA(E1_q[14]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L13 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]~COUT at LC7_H9
+--operation mode is up_dn_cntr
+
+E1L13 = CARRY(E1_q[14] & E1L92);
+
+
+--E1_q[15] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[15] at LC8_H9
+--operation mode is up_dn_cntr
+
+E1_q[15]_lut_out = E1_q[15] $ E1L13;
+E1_q[15] = DFFEA(E1_q[15]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+
+--C1L2 is dek7seg:dek1|Select~61 at LC5_C37
+--operation mode is normal
+
+C1L2 = E1_q[14] & !E1_q[15] & (!E1_q[12] # !E1_q[13]) # !E1_q[14] & (E1_q[15] $ E1_q[13]);
+
+
+--C1L1 is dek7seg:dek1|Select~40 at LC2_C39
+--operation mode is normal
+
+C1L1 = !E1_q[14] & !E1_q[13] # !E1_q[15];
+
+
+--C1L12 is dek7seg:dek1|seg[6]~660 at LC1_C43
+--operation mode is normal
+
+C1L12 = C1L1 & C1L2 # !C1L1 & C1L12;
+
+
+--C1L3 is dek7seg:dek1|Select~63 at LC4_C37
+--operation mode is normal
+
+C1L3 = E1_q[14] & (E1_q[15] # E1_q[13] & E1_q[12]) # !E1_q[14] & (E1_q[13] # !E1_q[15] & E1_q[12]);
+
+
+--C1L91 is dek7seg:dek1|seg[5]~661 at LC3_C39
+--operation mode is normal
+
+C1L91 = C1L3 & !C1L1 & C1L91 # !C1L3 & (C1L1 # C1L91);
+
+
+--C1L4 is dek7seg:dek1|Select~65 at LC1_C40
+--operation mode is normal
+
+C1L4 = E1_q[12] # E1_q[13] & E1_q[15] # !E1_q[13] & E1_q[14];
+
+
+--C1L71 is dek7seg:dek1|seg[4]~662 at LC2_C43
+--operation mode is normal
+
+C1L71 = C1L4 & !C1L1 & C1L71 # !C1L4 & (C1L1 # C1L71);
+
+
+--C1L5 is dek7seg:dek1|Select~67 at LC3_C37
+--operation mode is normal
+
+C1L5 = E1_q[13] & (E1_q[15] # E1_q[14] & E1_q[12]) # !E1_q[13] & (E1_q[14] $ (!E1_q[15] & E1_q[12]));
+
+
+--C1L51 is dek7seg:dek1|seg[3]~663 at LC4_C41
+--operation mode is normal
+
+C1L51 = C1L5 & !C1L1 & C1L51 # !C1L5 & (C1L1 # C1L51);
+
+
+--C1L6 is dek7seg:dek1|Select~69 at LC6_C37
+--operation mode is normal
+
+C1L6 = E1_q[15] & (E1_q[14] # E1_q[13]) # !E1_q[15] & !E1_q[14] & E1_q[13] & !E1_q[12];
+
+
+--C1L31 is dek7seg:dek1|seg[2]~664 at LC7_C37
+--operation mode is normal
+
+C1L31 = C1L6 & !C1L1 & C1L31 # !C1L6 & (C1L1 # C1L31);
+
+
+--C1L7 is dek7seg:dek1|Select~71 at LC2_C37
+--operation mode is normal
+
+C1L7 = E1_q[15] & (E1_q[14] # E1_q[13]) # !E1_q[15] & E1_q[14] & (E1_q[13] $ E1_q[12]);
+
+
+--C1L11 is dek7seg:dek1|seg[1]~665 at LC4_C38
+--operation mode is normal
+
+C1L11 = C1L7 & !C1L1 & C1L11 # !C1L7 & (C1L1 # C1L11);
+
+
+--C1L8 is dek7seg:dek1|Select~73 at LC1_C37
+--operation mode is normal
+
+C1L8 = E1_q[15] & (E1_q[14] # E1_q[13]) # !E1_q[15] & !E1_q[13] & (E1_q[14] $ E1_q[12]);
+
+
+--C1L9 is dek7seg:dek1|seg[0]~666 at LC1_C39
+--operation mode is normal
+
+C1L9 = C1L8 & !C1L1 & C1L9 # !C1L8 & (C1L1 # C1L9);
+
+
+--E1_q[8] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[8] at LC1_H9
+--operation mode is up_dn_cntr
+
+E1_q[8]_lut_out = E1_q[8] $ E1L71;
+E1_q[8] = DFFEA(E1_q[8]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L91 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]~COUT at LC1_H9
+--operation mode is up_dn_cntr
+
+E1L91 = CARRY(E1_q[8] & E1L71);
+
+
+--E1_q[9] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[9] at LC2_H9
+--operation mode is up_dn_cntr
+
+E1_q[9]_lut_out = E1_q[9] $ E1L91;
+E1_q[9] = DFFEA(E1_q[9]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L12 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]~COUT at LC2_H9
+--operation mode is up_dn_cntr
+
+E1L12 = CARRY(E1_q[9] & E1L91);
+
+
+--E1_q[10] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[10] at LC3_H9
+--operation mode is up_dn_cntr
+
+E1_q[10]_lut_out = E1_q[10] $ E1L12;
+E1_q[10] = DFFEA(E1_q[10]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L32 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT at LC3_H9
+--operation mode is up_dn_cntr
+
+E1L32 = CARRY(E1_q[10] & E1L12);
+
+
+--E1_q[11] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[11] at LC4_H9
+--operation mode is up_dn_cntr
+
+E1_q[11]_lut_out = E1_q[11] $ E1L32;
+E1_q[11] = DFFEA(E1_q[11]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L52 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT at LC4_H9
+--operation mode is up_dn_cntr
+
+E1L52 = CARRY(E1_q[11] & E1L32);
+
+
+--C2L2 is dek7seg:dek2|Select~61 at LC1_A27
+--operation mode is normal
+
+C2L2 = E1_q[10] & !E1_q[11] & (!E1_q[8] # !E1_q[9]) # !E1_q[10] & (E1_q[11] $ E1_q[9]);
+
+
+--C2L1 is dek7seg:dek2|Select~40 at LC3_A32
+--operation mode is normal
+
+C2L1 = !E1_q[10] & !E1_q[9] # !E1_q[11];
+
+
+--C2L12 is dek7seg:dek2|seg[6]~660 at LC8_A31
+--operation mode is normal
+
+C2L12 = C2L1 & C2L2 # !C2L1 & C2L12;
+
+
+--C2L3 is dek7seg:dek2|Select~63 at LC4_A32
+--operation mode is normal
+
+C2L3 = E1_q[10] & (E1_q[11] # E1_q[9] & E1_q[8]) # !E1_q[10] & (E1_q[9] # !E1_q[11] & E1_q[8]);
+
+
+--C2L91 is dek7seg:dek2|seg[5]~661 at LC6_A32
+--operation mode is normal
+
+C2L91 = C2L3 & !C2L1 & C2L91 # !C2L3 & (C2L1 # C2L91);
+
+
+--C2L4 is dek7seg:dek2|Select~65 at LC1_A44
+--operation mode is normal
+
+C2L4 = E1_q[8] # E1_q[9] & E1_q[11] # !E1_q[9] & E1_q[10];
+
+
+--C2L71 is dek7seg:dek2|seg[4]~662 at LC1_A33
+--operation mode is normal
+
+C2L71 = C2L4 & !C2L1 & C2L71 # !C2L4 & (C2L1 # C2L71);
+
+
+--C2L5 is dek7seg:dek2|Select~67 at LC1_A52
+--operation mode is normal
+
+C2L5 = E1_q[9] & (E1_q[11] # E1_q[10] & E1_q[8]) # !E1_q[9] & (E1_q[10] $ (!E1_q[11] & E1_q[8]));
+
+
+--C2L51 is dek7seg:dek2|seg[3]~663 at LC6_A31
+--operation mode is normal
+
+C2L51 = C2L5 & !C2L1 & C2L51 # !C2L5 & (C2L1 # C2L51);
+
+
+--C2L6 is dek7seg:dek2|Select~69 at LC2_A32
+--operation mode is normal
+
+C2L6 = E1_q[11] & (E1_q[10] # E1_q[9]) # !E1_q[11] & !E1_q[10] & E1_q[9] & !E1_q[8];
+
+
+--C2L31 is dek7seg:dek2|seg[2]~664 at LC2_A27
+--operation mode is normal
+
+C2L31 = C2L6 & !C2L1 & C2L31 # !C2L6 & (C2L1 # C2L31);
+
+
+--C2L7 is dek7seg:dek2|Select~71 at LC1_A32
+--operation mode is normal
+
+C2L7 = E1_q[11] & (E1_q[10] # E1_q[9]) # !E1_q[11] & E1_q[10] & (E1_q[9] $ E1_q[8]);
+
+
+--C2L11 is dek7seg:dek2|seg[1]~665 at LC2_A26
+--operation mode is normal
+
+C2L11 = C2L7 & !C2L1 & C2L11 # !C2L7 & (C2L1 # C2L11);
+
+
+--C2L8 is dek7seg:dek2|Select~73 at LC1_A29
+--operation mode is normal
+
+C2L8 = E1_q[11] & (E1_q[10] # E1_q[9]) # !E1_q[11] & !E1_q[9] & (E1_q[10] $ E1_q[8]);
+
+
+--C2L9 is dek7seg:dek2|seg[0]~666 at LC2_A29
+--operation mode is normal
+
+C2L9 = C2L8 & !C2L1 & C2L9 # !C2L8 & (C2L1 # C2L9);
+
+
+--E1_q[4] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[4] at LC5_H7
+--operation mode is up_dn_cntr
+
+E1_q[4]_lut_out = E1_q[4] $ E1L9;
+E1_q[4] = DFFEA(E1_q[4]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L11 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT at LC5_H7
+--operation mode is up_dn_cntr
+
+E1L11 = CARRY(E1_q[4] & E1L9);
+
+
+--E1_q[5] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[5] at LC6_H7
+--operation mode is up_dn_cntr
+
+E1_q[5]_lut_out = E1_q[5] $ E1L11;
+E1_q[5] = DFFEA(E1_q[5]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L31 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT at LC6_H7
+--operation mode is up_dn_cntr
+
+E1L31 = CARRY(E1_q[5] & E1L11);
+
+
+--E1_q[6] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[6] at LC7_H7
+--operation mode is up_dn_cntr
+
+E1_q[6]_lut_out = E1_q[6] $ E1L31;
+E1_q[6] = DFFEA(E1_q[6]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L51 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT at LC7_H7
+--operation mode is up_dn_cntr
+
+E1L51 = CARRY(E1_q[6] & E1L31);
+
+
+--E1_q[7] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[7] at LC8_H7
+--operation mode is up_dn_cntr
+
+E1_q[7]_lut_out = E1_q[7] $ E1L51;
+E1_q[7] = DFFEA(E1_q[7]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L71 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT at LC8_H7
+--operation mode is up_dn_cntr
+
+E1L71 = CARRY(E1_q[7] & E1L51);
+
+
+--C3L2 is dek7seg:dek3|Select~61 at LC1_H18
+--operation mode is normal
+
+C3L2 = E1_q[6] & !E1_q[7] & (!E1_q[4] # !E1_q[5]) # !E1_q[6] & (E1_q[7] $ E1_q[5]);
+
+
+--C3L1 is dek7seg:dek3|Select~40 at LC1_H21
+--operation mode is normal
+
+C3L1 = !E1_q[6] & !E1_q[5] # !E1_q[7];
+
+
+--C3L12 is dek7seg:dek3|seg[6]~660 at LC2_H21
+--operation mode is normal
+
+C3L12 = C3L1 & C3L2 # !C3L1 & C3L12;
+
+
+--C3L3 is dek7seg:dek3|Select~63 at LC2_H18
+--operation mode is normal
+
+C3L3 = E1_q[6] & (E1_q[7] # E1_q[5] & E1_q[4]) # !E1_q[6] & (E1_q[5] # !E1_q[7] & E1_q[4]);
+
+
+--C3L91 is dek7seg:dek3|seg[5]~661 at LC1_H20
+--operation mode is normal
+
+C3L91 = C3L3 & !C3L1 & C3L91 # !C3L3 & (C3L1 # C3L91);
+
+
+--C3L4 is dek7seg:dek3|Select~65 at LC3_H18
+--operation mode is normal
+
+C3L4 = E1_q[4] # E1_q[5] & E1_q[7] # !E1_q[5] & E1_q[6];
+
+
+--C3L71 is dek7seg:dek3|seg[4]~662 at LC4_H21
+--operation mode is normal
+
+C3L71 = C3L4 & !C3L1 & C3L71 # !C3L4 & (C3L1 # C3L71);
+
+
+--C3L5 is dek7seg:dek3|Select~67 at LC7_H18
+--operation mode is normal
+
+C3L5 = E1_q[5] & (E1_q[7] # E1_q[6] & E1_q[4]) # !E1_q[5] & (E1_q[6] $ (!E1_q[7] & E1_q[4]));
+
+
+--C3L51 is dek7seg:dek3|seg[3]~663 at LC2_H22
+--operation mode is normal
+
+C3L51 = C3L5 & !C3L1 & C3L51 # !C3L5 & (C3L1 # C3L51);
+
+
+--C3L6 is dek7seg:dek3|Select~69 at LC8_H18
+--operation mode is normal
+
+C3L6 = E1_q[7] & (E1_q[6] # E1_q[5]) # !E1_q[7] & !E1_q[6] & E1_q[5] & !E1_q[4];
+
+
+--C3L31 is dek7seg:dek3|seg[2]~664 at LC4_H18
+--operation mode is normal
+
+C3L31 = C3L6 & !C3L1 & C3L31 # !C3L6 & (C3L1 # C3L31);
+
+
+--C3L7 is dek7seg:dek3|Select~71 at LC6_H18
+--operation mode is normal
+
+C3L7 = E1_q[7] & (E1_q[6] # E1_q[5]) # !E1_q[7] & E1_q[6] & (E1_q[5] $ E1_q[4]);
+
+
+--C3L11 is dek7seg:dek3|seg[1]~665 at LC7_H16
+--operation mode is normal
+
+C3L11 = C3L7 & !C3L1 & C3L11 # !C3L7 & (C3L1 # C3L11);
+
+
+--C3L8 is dek7seg:dek3|Select~73 at LC5_H18
+--operation mode is normal
+
+C3L8 = E1_q[7] & (E1_q[6] # E1_q[5]) # !E1_q[7] & !E1_q[5] & (E1_q[6] $ E1_q[4]);
+
+
+--C3L9 is dek7seg:dek3|seg[0]~666 at LC2_H20
+--operation mode is normal
+
+C3L9 = C3L8 & !C3L1 & C3L9 # !C3L8 & (C3L1 # C3L9);
+
+
+--E1_q[0] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[0] at LC1_H7
+--operation mode is up_dn_cntr
+
+E1_q[0]_lut_out = !E1_q[0];
+E1_q[0] = DFFEA(E1_q[0]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L3 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT at LC1_H7
+--operation mode is up_dn_cntr
+
+E1L3 = CARRY(E1_q[0]);
+
+
+--E1_q[1] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[1] at LC2_H7
+--operation mode is up_dn_cntr
+
+E1_q[1]_lut_out = E1_q[1] $ E1L3;
+E1_q[1] = DFFEA(E1_q[1]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L5 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT at LC2_H7
+--operation mode is up_dn_cntr
+
+E1L5 = CARRY(E1_q[1] & E1L3);
+
+
+--E1_q[2] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[2] at LC3_H7
+--operation mode is up_dn_cntr
+
+E1_q[2]_lut_out = E1_q[2] $ E1L5;
+E1_q[2] = DFFEA(E1_q[2]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L7 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT at LC3_H7
+--operation mode is up_dn_cntr
+
+E1L7 = CARRY(E1_q[2] & E1L5);
+
+
+--E1_q[3] is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|q[3] at LC4_H7
+--operation mode is up_dn_cntr
+
+E1_q[3]_lut_out = E1_q[3] $ E1L7;
+E1_q[3] = DFFEA(E1_q[3]_lut_out, GLOBAL(D1_clkout), , , , , );
+
+--E1L9 is lpm_counter:cntr_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT at LC4_H7
+--operation mode is up_dn_cntr
+
+E1L9 = CARRY(E1_q[3] & E1L7);
+
+
+--C4L2 is dek7seg:dek4|Select~61 at LC6_H23
+--operation mode is normal
+
+C4L2 = E1_q[2] & !E1_q[3] & (!E1_q[0] # !E1_q[1]) # !E1_q[2] & (E1_q[3] $ E1_q[1]);
+
+
+--C4L1 is dek7seg:dek4|Select~40 at LC5_H23
+--operation mode is normal
+
+C4L1 = !E1_q[2] & !E1_q[1] # !E1_q[3];
+
+
+--C4L12 is dek7seg:dek4|seg[6]~660 at LC1_H14
+--operation mode is normal
+
+C4L12 = C4L1 & C4L2 # !C4L1 & C4L12;
+
+
+--C4L3 is dek7seg:dek4|Select~63 at LC4_H23
+--operation mode is normal
+
+C4L3 = E1_q[2] & (E1_q[3] # E1_q[1] & E1_q[0]) # !E1_q[2] & (E1_q[1] # !E1_q[3] & E1_q[0]);
+
+
+--C4L91 is dek7seg:dek4|seg[5]~661 at LC6_H11
+--operation mode is normal
+
+C4L91 = C4L3 & !C4L1 & C4L91 # !C4L3 & (C4L1 # C4L91);
+
+
+--C4L4 is dek7seg:dek4|Select~65 at LC1_H17
+--operation mode is normal
+
+C4L4 = E1_q[0] # E1_q[1] & E1_q[3] # !E1_q[1] & E1_q[2];
+
+
+--C4L71 is dek7seg:dek4|seg[4]~662 at LC1_H15
+--operation mode is normal
+
+C4L71 = C4L4 & !C4L1 & C4L71 # !C4L4 & (C4L1 # C4L71);
+
+
+--C4L5 is dek7seg:dek4|Select~67 at LC3_H23
+--operation mode is normal
+
+C4L5 = E1_q[1] & (E1_q[3] # E1_q[2] & E1_q[0]) # !E1_q[1] & (E1_q[2] $ (!E1_q[3] & E1_q[0]));
+
+
+--C4L51 is dek7seg:dek4|seg[3]~663 at LC4_H11
+--operation mode is normal
+
+C4L51 = C4L5 & !C4L1 & C4L51 # !C4L5 & (C4L1 # C4L51);
+
+
+--C4L6 is dek7seg:dek4|Select~69 at LC2_H23
+--operation mode is normal
+
+C4L6 = E1_q[3] & (E1_q[2] # E1_q[1]) # !E1_q[3] & !E1_q[2] & E1_q[1] & !E1_q[0];
+
+
+--C4L31 is dek7seg:dek4|seg[2]~664 at LC2_H10
+--operation mode is normal
+
+C4L31 = C4L6 & !C4L1 & C4L31 # !C4L6 & (C4L1 # C4L31);
+
+
+--C4L7 is dek7seg:dek4|Select~71 at LC1_H23
+--operation mode is normal
+
+C4L7 = E1_q[3] & (E1_q[2] # E1_q[1]) # !E1_q[3] & E1_q[2] & (E1_q[1] $ E1_q[0]);
+
+
+--C4L11 is dek7seg:dek4|seg[1]~665 at LC4_H10
+--operation mode is normal
+
+C4L11 = C4L7 & !C4L1 & C4L11 # !C4L7 & (C4L1 # C4L11);
+
+
+--C4L8 is dek7seg:dek4|Select~73 at LC1_H12
+--operation mode is normal
+
+C4L8 = E1_q[3] & (E1_q[2] # E1_q[1]) # !E1_q[3] & !E1_q[1] & (E1_q[2] $ E1_q[0]);
+
+
+--C4L9 is dek7seg:dek4|seg[0]~666 at LC1_H11
+--operation mode is normal
+
+C4L9 = C4L8 & !C4L1 & C4L9 # !C4L8 & (C4L1 # C4L9);
+
+
+--D1_clkout is prescaler:mod1|clkout at LC1_I21
+--operation mode is normal
+
+D1_clkout_lut_out = E2_q[24];
+D1_clkout = DFFEA(D1_clkout_lut_out, GLOBAL(MCLK), , , , , );
+
+
+--E2_q[24] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[24] at LC1_I24
+--operation mode is clrb_cntr
+
+E2_q[24]_lut_out = (E2_q[24] $ E2L94) & D1L3;
+E2_q[24] = DFFEA(E2_q[24]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L15 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[24]~COUT at LC1_I24
+--operation mode is clrb_cntr
+
+E2L15 = CARRY(E2_q[24] & E2L94);
+
+
+--E2_q[31] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[31] at LC8_I24
+--operation mode is clrb_cntr
+
+E2_q[31]_lut_out = (E2_q[31] $ E2L36) & D1L3;
+E2_q[31] = DFFEA(E2_q[31]_lut_out, GLOBAL(MCLK), , , , , );
+
+
+--E2_q[30] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[30] at LC7_I24
+--operation mode is clrb_cntr
+
+E2_q[30]_lut_out = (E2_q[30] $ E2L16) & D1L3;
+E2_q[30] = DFFEA(E2_q[30]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L36 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[30]~COUT at LC7_I24
+--operation mode is clrb_cntr
+
+E2L36 = CARRY(E2_q[30] & E2L16);
+
+
+--E2_q[29] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[29] at LC6_I24
+--operation mode is clrb_cntr
+
+E2_q[29]_lut_out = (E2_q[29] $ E2L95) & D1L3;
+E2_q[29] = DFFEA(E2_q[29]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L16 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[29]~COUT at LC6_I24
+--operation mode is clrb_cntr
+
+E2L16 = CARRY(E2_q[29] & E2L95);
+
+
+--E2_q[28] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[28] at LC5_I24
+--operation mode is clrb_cntr
+
+E2_q[28]_lut_out = (E2_q[28] $ E2L75) & D1L3;
+E2_q[28] = DFFEA(E2_q[28]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L95 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[28]~COUT at LC5_I24
+--operation mode is clrb_cntr
+
+E2L95 = CARRY(E2_q[28] & E2L75);
+
+
+--D1L4 is prescaler:mod1|LessThan~296 at LC1_I25
+--operation mode is normal
+
+D1L4 = !E2_q[28] & !E2_q[29] & !E2_q[30] & !E2_q[31];
+
+
+--E2_q[27] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[27] at LC4_I24
+--operation mode is clrb_cntr
+
+E2_q[27]_lut_out = (E2_q[27] $ E2L55) & D1L3;
+E2_q[27] = DFFEA(E2_q[27]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L75 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[27]~COUT at LC4_I24
+--operation mode is clrb_cntr
+
+E2L75 = CARRY(E2_q[27] & E2L55);
+
+
+--E2_q[26] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[26] at LC3_I24
+--operation mode is clrb_cntr
+
+E2_q[26]_lut_out = (E2_q[26] $ E2L35) & D1L3;
+E2_q[26] = DFFEA(E2_q[26]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L55 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[26]~COUT at LC3_I24
+--operation mode is clrb_cntr
+
+E2L55 = CARRY(E2_q[26] & E2L35);
+
+
+--E2_q[25] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[25] at LC2_I24
+--operation mode is clrb_cntr
+
+E2_q[25]_lut_out = (E2_q[25] $ E2L15) & D1L3;
+E2_q[25] = DFFEA(E2_q[25]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L35 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[25]~COUT at LC2_I24
+--operation mode is clrb_cntr
+
+E2L35 = CARRY(E2_q[25] & E2L15);
+
+
+--D1L5 is prescaler:mod1|LessThan~297 at LC2_I25
+--operation mode is normal
+
+D1L5 = !E2_q[25] & !E2_q[26] & !E2_q[27] & D1L4;
+
+
+--E2_q[22] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[22] at LC7_I22
+--operation mode is clrb_cntr
+
+E2_q[22]_lut_out = (E2_q[22] $ E2L54) & D1L3;
+E2_q[22] = DFFEA(E2_q[22]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L74 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[22]~COUT at LC7_I22
+--operation mode is clrb_cntr
+
+E2L74 = CARRY(E2_q[22] & E2L54);
+
+
+--E2_q[21] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[21] at LC6_I22
+--operation mode is clrb_cntr
+
+E2_q[21]_lut_out = (E2_q[21] $ E2L34) & D1L3;
+E2_q[21] = DFFEA(E2_q[21]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L54 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[21]~COUT at LC6_I22
+--operation mode is clrb_cntr
+
+E2L54 = CARRY(E2_q[21] & E2L34);
+
+
+--E2_q[20] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[20] at LC5_I22
+--operation mode is clrb_cntr
+
+E2_q[20]_lut_out = (E2_q[20] $ E2L14) & D1L3;
+E2_q[20] = DFFEA(E2_q[20]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L34 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[20]~COUT at LC5_I22
+--operation mode is clrb_cntr
+
+E2L34 = CARRY(E2_q[20] & E2L14);
+
+
+--E2_q[19] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[19] at LC4_I22
+--operation mode is clrb_cntr
+
+E2_q[19]_lut_out = (E2_q[19] $ E2L93) & D1L3;
+E2_q[19] = DFFEA(E2_q[19]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L14 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[19]~COUT at LC4_I22
+--operation mode is clrb_cntr
+
+E2L14 = CARRY(E2_q[19] & E2L93);
+
+
+--D1L6 is prescaler:mod1|LessThan~298 at LC1_I23
+--operation mode is normal
+
+D1L6 = !E2_q[19] & !E2_q[20] & !E2_q[21] & !E2_q[22];
+
+
+--E2_q[18] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[18] at LC3_I22
+--operation mode is clrb_cntr
+
+E2_q[18]_lut_out = (E2_q[18] $ E2L73) & D1L3;
+E2_q[18] = DFFEA(E2_q[18]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L93 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[18]~COUT at LC3_I22
+--operation mode is clrb_cntr
+
+E2L93 = CARRY(E2_q[18] & E2L73);
+
+
+--E2_q[17] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[17] at LC2_I22
+--operation mode is clrb_cntr
+
+E2_q[17]_lut_out = (E2_q[17] $ E2L53) & D1L3;
+E2_q[17] = DFFEA(E2_q[17]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L73 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[17]~COUT at LC2_I22
+--operation mode is clrb_cntr
+
+E2L73 = CARRY(E2_q[17] & E2L53);
+
+
+--E2_q[16] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[16] at LC1_I22
+--operation mode is clrb_cntr
+
+E2_q[16]_lut_out = (E2_q[16] $ E2L33) & D1L3;
+E2_q[16] = DFFEA(E2_q[16]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L53 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[16]~COUT at LC1_I22
+--operation mode is clrb_cntr
+
+E2L53 = CARRY(E2_q[16] & E2L33);
+
+
+--E2_q[15] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[15] at LC8_I20
+--operation mode is clrb_cntr
+
+E2_q[15]_lut_out = (E2_q[15] $ E2L13) & D1L3;
+E2_q[15] = DFFEA(E2_q[15]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L33 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[15]~COUT at LC8_I20
+--operation mode is clrb_cntr
+
+E2L33 = CARRY(E2_q[15] & E2L13);
+
+
+--D1L7 is prescaler:mod1|LessThan~299 at LC2_I21
+--operation mode is normal
+
+D1L7 = !E2_q[15] & !E2_q[16] & !E2_q[17] & !E2_q[18];
+
+
+--E2_q[14] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[14] at LC7_I20
+--operation mode is clrb_cntr
+
+E2_q[14]_lut_out = (E2_q[14] $ E2L92) & D1L3;
+E2_q[14] = DFFEA(E2_q[14]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L13 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[14]~COUT at LC7_I20
+--operation mode is clrb_cntr
+
+E2L13 = CARRY(E2_q[14] & E2L92);
+
+
+--D1L8 is prescaler:mod1|LessThan~300 at LC4_I21
+--operation mode is normal
+
+D1L8 = !E2_q[14] & D1L7 & D1L6;
+
+
+--E2_q[4] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[4] at LC5_I18
+--operation mode is clrb_cntr
+
+E2_q[4]_lut_out = (E2_q[4] $ E2L9) & D1L3;
+E2_q[4] = DFFEA(E2_q[4]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L11 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT at LC5_I18
+--operation mode is clrb_cntr
+
+E2L11 = CARRY(E2_q[4] & E2L9);
+
+
+--E2_q[3] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[3] at LC4_I18
+--operation mode is clrb_cntr
+
+E2_q[3]_lut_out = (E2_q[3] $ E2L7) & D1L3;
+E2_q[3] = DFFEA(E2_q[3]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L9 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT at LC4_I18
+--operation mode is clrb_cntr
+
+E2L9 = CARRY(E2_q[3] & E2L7);
+
+
+--E2_q[5] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[5] at LC6_I18
+--operation mode is clrb_cntr
+
+E2_q[5]_lut_out = (E2_q[5] $ E2L11) & D1L3;
+E2_q[5] = DFFEA(E2_q[5]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L31 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT at LC6_I18
+--operation mode is clrb_cntr
+
+E2L31 = CARRY(E2_q[5] & E2L11);
+
+
+--E2_q[9] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[9] at LC2_I20
+--operation mode is clrb_cntr
+
+E2_q[9]_lut_out = (E2_q[9] $ E2L91) & D1L3;
+E2_q[9] = DFFEA(E2_q[9]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L12 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[9]~COUT at LC2_I20
+--operation mode is clrb_cntr
+
+E2L12 = CARRY(E2_q[9] & E2L91);
+
+
+--D1L9 is prescaler:mod1|LessThan~301 at LC5_I21
+--operation mode is normal
+
+D1L9 = !E2_q[5] & (!E2_q[4] # !E2_q[3]) # !E2_q[9];
+
+
+--E2_q[8] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[8] at LC1_I20
+--operation mode is clrb_cntr
+
+E2_q[8]_lut_out = (E2_q[8] $ E2L71) & D1L3;
+E2_q[8] = DFFEA(E2_q[8]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L91 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[8]~COUT at LC1_I20
+--operation mode is clrb_cntr
+
+E2L91 = CARRY(E2_q[8] & E2L71);
+
+
+--E2_q[7] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[7] at LC8_I18
+--operation mode is clrb_cntr
+
+E2_q[7]_lut_out = (E2_q[7] $ E2L51) & D1L3;
+E2_q[7] = DFFEA(E2_q[7]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L71 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT at LC8_I18
+--operation mode is clrb_cntr
+
+E2L71 = CARRY(E2_q[7] & E2L51);
+
+
+--E2_q[6] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[6] at LC7_I18
+--operation mode is clrb_cntr
+
+E2_q[6]_lut_out = (E2_q[6] $ E2L31) & D1L3;
+E2_q[6] = DFFEA(E2_q[6]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L51 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT at LC7_I18
+--operation mode is clrb_cntr
+
+E2L51 = CARRY(E2_q[6] & E2L31);
+
+
+--D1L01 is prescaler:mod1|LessThan~302 at LC6_I21
+--operation mode is normal
+
+D1L01 = D1L9 # !E2_q[8] # !E2_q[7] # !E2_q[6];
+
+
+--E2_q[12] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[12] at LC5_I20
+--operation mode is clrb_cntr
+
+E2_q[12]_lut_out = (E2_q[12] $ E2L52) & D1L3;
+E2_q[12] = DFFEA(E2_q[12]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L72 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT at LC5_I20
+--operation mode is clrb_cntr
+
+E2L72 = CARRY(E2_q[12] & E2L52);
+
+
+--E2_q[11] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[11] at LC4_I20
+--operation mode is clrb_cntr
+
+E2_q[11]_lut_out = (E2_q[11] $ E2L32) & D1L3;
+E2_q[11] = DFFEA(E2_q[11]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L52 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT at LC4_I20
+--operation mode is clrb_cntr
+
+E2L52 = CARRY(E2_q[11] & E2L32);
+
+
+--E2_q[10] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[10] at LC3_I20
+--operation mode is clrb_cntr
+
+E2_q[10]_lut_out = (E2_q[10] $ E2L12) & D1L3;
+E2_q[10] = DFFEA(E2_q[10]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L32 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT at LC3_I20
+--operation mode is clrb_cntr
+
+E2L32 = CARRY(E2_q[10] & E2L12);
+
+
+--D1L1 is prescaler:mod1|LessThan~52 at LC7_I21
+--operation mode is normal
+
+D1L1 = !E2_q[10] & !E2_q[11] & !E2_q[12] & D1L01;
+
+
+--E2_q[13] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[13] at LC6_I20
+--operation mode is clrb_cntr
+
+E2_q[13]_lut_out = (E2_q[13] $ E2L72) & D1L3;
+E2_q[13] = DFFEA(E2_q[13]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L92 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT at LC6_I20
+--operation mode is clrb_cntr
+
+E2L92 = CARRY(E2_q[13] & E2L72);
+
+
+--D1L2 is prescaler:mod1|LessThan~92 at LC8_I21
+--operation mode is normal
+
+D1L2 = D1L8 & (D1L1 # !E2_q[13]);
+
+
+--E2_q[23] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[23] at LC8_I22
+--operation mode is clrb_cntr
+
+E2_q[23]_lut_out = (E2_q[23] $ E2L74) & D1L3;
+E2_q[23] = DFFEA(E2_q[23]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L94 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[23]~COUT at LC8_I22
+--operation mode is clrb_cntr
+
+E2L94 = CARRY(E2_q[23] & E2L74);
+
+
+--D1L3 is prescaler:mod1|LessThan~128 at LC3_I21
+--operation mode is normal
+
+D1L3 = D1L5 & (D1L2 # !E2_q[24] # !E2_q[23]);
+
+
+--E2_q[2] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[2] at LC3_I18
+--operation mode is clrb_cntr
+
+E2_q[2]_lut_out = (E2_q[2] $ E2L5) & D1L3;
+E2_q[2] = DFFEA(E2_q[2]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L7 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT at LC3_I18
+--operation mode is clrb_cntr
+
+E2L7 = CARRY(E2_q[2] & E2L5);
+
+
+--E2_q[1] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[1] at LC2_I18
+--operation mode is clrb_cntr
+
+E2_q[1]_lut_out = (E2_q[1] $ E2L3) & D1L3;
+E2_q[1] = DFFEA(E2_q[1]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L5 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT at LC2_I18
+--operation mode is clrb_cntr
+
+E2L5 = CARRY(E2_q[1] & E2L3);
+
+
+--E2_q[0] is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|q[0] at LC1_I18
+--operation mode is clrb_cntr
+
+E2_q[0]_lut_out = (!E2_q[0]) & D1L3;
+E2_q[0] = DFFEA(E2_q[0]_lut_out, GLOBAL(MCLK), , , , , );
+
+--E2L3 is prescaler:mod1|lpm_counter:cntr_rtl_1|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT at LC1_I18
+--operation mode is clrb_cntr
+
+E2L3 = CARRY(E2_q[0]);
+
+
+--SW[7] is SW[7] at PIN_51
+--operation mode is input
+
+SW[7] = INPUT();
+
+
+--SW[6] is SW[6] at PIN_50
+--operation mode is input
+
+SW[6] = INPUT();
+
+
+--SW[5] is SW[5] at PIN_62
+--operation mode is input
+
+SW[5] = INPUT();
+
+
+--SW[4] is SW[4] at PIN_61
+--operation mode is input
+
+SW[4] = INPUT();
+
+
+--SW[3] is SW[3] at PIN_68
+--operation mode is input
+
+SW[3] = INPUT();
+
+
+--SW[2] is SW[2] at PIN_67
+--operation mode is input
+
+SW[2] = INPUT();
+
+
+--SW[1] is SW[1] at PIN_83
+--operation mode is input
+
+SW[1] = INPUT();
+
+
+--SW[0] is SW[0] at PIN_84
+--operation mode is input
+
+SW[0] = INPUT();
+
+
+--BT[3] is BT[3] at PIN_95
+--operation mode is input
+
+BT[3] = INPUT();
+
+
+--BT[2] is BT[2] at PIN_100
+--operation mode is input
+
+BT[2] = INPUT();
+
+
+--BT[1] is BT[1] at PIN_88
+--operation mode is input
+
+BT[1] = INPUT();
+
+
+--BT[0] is BT[0] at PIN_98
+--operation mode is input
+
+BT[0] = INPUT();
+
+
+--RS232_RX is RS232_RX at PIN_182
+--operation mode is input
+
+RS232_RX = INPUT();
+
+
+--RS232_CTS is RS232_CTS at PIN_181
+--operation mode is input
+
+RS232_CTS = INPUT();
+
+
+--MCLK is MCLK at PIN_91
+--operation mode is input
+
+MCLK = INPUT();
+
+
+--FLEX_DIGIT_1[6] is FLEX_DIGIT_1[6] at PIN_13
+--operation mode is output
+
+FLEX_DIGIT_1[6] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[5] is FLEX_DIGIT_1[5] at PIN_12
+--operation mode is output
+
+FLEX_DIGIT_1[5] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[4] is FLEX_DIGIT_1[4] at PIN_11
+--operation mode is output
+
+FLEX_DIGIT_1[4] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[3] is FLEX_DIGIT_1[3] at PIN_9
+--operation mode is output
+
+FLEX_DIGIT_1[3] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[2] is FLEX_DIGIT_1[2] at PIN_8
+--operation mode is output
+
+FLEX_DIGIT_1[2] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[1] is FLEX_DIGIT_1[1] at PIN_7
+--operation mode is output
+
+FLEX_DIGIT_1[1] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1[0] is FLEX_DIGIT_1[0] at PIN_6
+--operation mode is output
+
+FLEX_DIGIT_1[0] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_1_DP is FLEX_DIGIT_1_DP at PIN_14
+--operation mode is output
+
+FLEX_DIGIT_1_DP = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[6] is FLEX_DIGIT_2[6] at PIN_24
+--operation mode is output
+
+FLEX_DIGIT_2[6] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[5] is FLEX_DIGIT_2[5] at PIN_23
+--operation mode is output
+
+FLEX_DIGIT_2[5] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[4] is FLEX_DIGIT_2[4] at PIN_21
+--operation mode is output
+
+FLEX_DIGIT_2[4] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[3] is FLEX_DIGIT_2[3] at PIN_20
+--operation mode is output
+
+FLEX_DIGIT_2[3] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[2] is FLEX_DIGIT_2[2] at PIN_19
+--operation mode is output
+
+FLEX_DIGIT_2[2] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[1] is FLEX_DIGIT_2[1] at PIN_18
+--operation mode is output
+
+FLEX_DIGIT_2[1] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2[0] is FLEX_DIGIT_2[0] at PIN_17
+--operation mode is output
+
+FLEX_DIGIT_2[0] = OUTPUT(VCC);
+
+
+--FLEX_DIGIT_2_DP is FLEX_DIGIT_2_DP at PIN_25
+--operation mode is output
+
+FLEX_DIGIT_2_DP = OUTPUT(VCC);
+
+
+--VGA_RED is VGA_RED at PIN_236
+--operation mode is output
+
+VGA_RED = OUTPUT(GND);
+
+
+--VGA_BLUE is VGA_BLUE at PIN_238
+--operation mode is output
+
+VGA_BLUE = OUTPUT(GND);
+
+
+--VGA_GREEN is VGA_GREEN at PIN_237
+--operation mode is output
+
+VGA_GREEN = OUTPUT(GND);
+
+
+--VGA_HSYNC is VGA_HSYNC at PIN_240
+--operation mode is output
+
+VGA_HSYNC = OUTPUT(GND);
+
+
+--VGA_VSYNC is VGA_VSYNC at PIN_239
+--operation mode is output
+
+VGA_VSYNC = OUTPUT(GND);
+
+
+--LED[15] is LED[15] at PIN_46
+--operation mode is output
+
+LED[15] = OUTPUT(GND);
+
+
+--LED[14] is LED[14] at PIN_45
+--operation mode is output
+
+LED[14] = OUTPUT(GND);
+
+
+--LED[13] is LED[13] at PIN_49
+--operation mode is output
+
+LED[13] = OUTPUT(GND);
+
+
+--LED[12] is LED[12] at PIN_48
+--operation mode is output
+
+LED[12] = OUTPUT(GND);
+
+
+--LED[11] is LED[11] at PIN_54
+--operation mode is output
+
+LED[11] = OUTPUT(GND);
+
+
+--LED[10] is LED[10] at PIN_53
+--operation mode is output
+
+LED[10] = OUTPUT(GND);
+
+
+--LED[9] is LED[9] at PIN_56
+--operation mode is output
+
+LED[9] = OUTPUT(GND);
+
+
+--LED[8] is LED[8] at PIN_55
+--operation mode is output
+
+LED[8] = OUTPUT(GND);
+
+
+--LED[7] is LED[7] at PIN_64
+--operation mode is output
+
+LED[7] = OUTPUT(GND);
+
+
+--LED[6] is LED[6] at PIN_63
+--operation mode is output
+
+LED[6] = OUTPUT(GND);
+
+
+--LED[5] is LED[5] at PIN_66
+--operation mode is output
+
+LED[5] = OUTPUT(GND);
+
+
+--LED[4] is LED[4] at PIN_65
+--operation mode is output
+
+LED[4] = OUTPUT(GND);
+
+
+--LED[3] is LED[3] at PIN_79
+--operation mode is output
+
+LED[3] = OUTPUT(GND);
+
+
+--LED[2] is LED[2] at PIN_80
+--operation mode is output
+
+LED[2] = OUTPUT(GND);
+
+
+--LED[1] is LED[1] at PIN_81
+--operation mode is output
+
+LED[1] = OUTPUT(GND);
+
+
+--LED[0] is LED[0] at PIN_82
+--operation mode is output
+
+LED[0] = OUTPUT(GND);
+
+
+--DISP1[6] is DISP1[6] at PIN_230
+--operation mode is output
+
+DISP1[6] = OUTPUT(C1L12);
+
+
+--DISP1[5] is DISP1[5] at PIN_228
+--operation mode is output
+
+DISP1[5] = OUTPUT(C1L91);
+
+
+--DISP1[4] is DISP1[4] at PIN_231
+--operation mode is output
+
+DISP1[4] = OUTPUT(C1L71);
+
+
+--DISP1[3] is DISP1[3] at PIN_229
+--operation mode is output
+
+DISP1[3] = OUTPUT(C1L51);
+
+
+--DISP1[2] is DISP1[2] at PIN_226
+--operation mode is output
+
+DISP1[2] = OUTPUT(C1L31);
+
+
+--DISP1[1] is DISP1[1] at PIN_225
+--operation mode is output
+
+DISP1[1] = OUTPUT(C1L11);
+
+
+--DISP1[0] is DISP1[0] at PIN_227
+--operation mode is output
+
+DISP1[0] = OUTPUT(C1L9);
+
+
+--DISP1_DP is DISP1_DP at PIN_223
+--operation mode is output
+
+DISP1_DP = OUTPUT(GND);
+
+
+--DISP2[6] is DISP2[6] at PIN_219
+--operation mode is output
+
+DISP2[6] = OUTPUT(C2L12);
+
+
+--DISP2[5] is DISP2[5] at PIN_217
+--operation mode is output
+
+DISP2[5] = OUTPUT(C2L91);
+
+
+--DISP2[4] is DISP2[4] at PIN_220
+--operation mode is output
+
+DISP2[4] = OUTPUT(C2L71);
+
+
+--DISP2[3] is DISP2[3] at PIN_218
+--operation mode is output
+
+DISP2[3] = OUTPUT(C2L51);
+
+
+--DISP2[2] is DISP2[2] at PIN_214
+--operation mode is output
+
+DISP2[2] = OUTPUT(C2L31);
+
+
+--DISP2[1] is DISP2[1] at PIN_208
+--operation mode is output
+
+DISP2[1] = OUTPUT(C2L11);
+
+
+--DISP2[0] is DISP2[0] at PIN_215
+--operation mode is output
+
+DISP2[0] = OUTPUT(C2L9);
+
+
+--DISP2_DP is DISP2_DP at PIN_207
+--operation mode is output
+
+DISP2_DP = OUTPUT(GND);
+
+
+--DISP3[6] is DISP3[6] at PIN_202
+--operation mode is output
+
+DISP3[6] = OUTPUT(C3L12);
+
+
+--DISP3[5] is DISP3[5] at PIN_200
+--operation mode is output
+
+DISP3[5] = OUTPUT(C3L91);
+
+
+--DISP3[4] is DISP3[4] at PIN_203
+--operation mode is output
+
+DISP3[4] = OUTPUT(C3L71);
+
+
+--DISP3[3] is DISP3[3] at PIN_201
+--operation mode is output
+
+DISP3[3] = OUTPUT(C3L51);
+
+
+--DISP3[2] is DISP3[2] at PIN_198
+--operation mode is output
+
+DISP3[2] = OUTPUT(C3L31);
+
+
+--DISP3[1] is DISP3[1] at PIN_196
+--operation mode is output
+
+DISP3[1] = OUTPUT(C3L11);
+
+
+--DISP3[0] is DISP3[0] at PIN_199
+--operation mode is output
+
+DISP3[0] = OUTPUT(C3L9);
+
+
+--DISP3_DP is DISP3_DP at PIN_195
+--operation mode is output
+
+DISP3_DP = OUTPUT(GND);
+
+
+--DISP4[6] is DISP4[6] at PIN_193
+--operation mode is output
+
+DISP4[6] = OUTPUT(C4L12);
+
+
+--DISP4[5] is DISP4[5] at PIN_191
+--operation mode is output
+
+DISP4[5] = OUTPUT(C4L91);
+
+
+--DISP4[4] is DISP4[4] at PIN_194
+--operation mode is output
+
+DISP4[4] = OUTPUT(C4L71);
+
+
+--DISP4[3] is DISP4[3] at PIN_192
+--operation mode is output
+
+DISP4[3] = OUTPUT(C4L51);
+
+
+--DISP4[2] is DISP4[2] at PIN_188
+--operation mode is output
+
+DISP4[2] = OUTPUT(C4L31);
+
+
+--DISP4[1] is DISP4[1] at PIN_187
+--operation mode is output
+
+DISP4[1] = OUTPUT(C4L11);
+
+
+--DISP4[0] is DISP4[0] at PIN_190
+--operation mode is output
+
+DISP4[0] = OUTPUT(C4L9);
+
+
+--DISP4_DP is DISP4_DP at PIN_186
+--operation mode is output
+
+DISP4_DP = OUTPUT(GND);
+
+
+--RS232_TX is RS232_TX at PIN_183
+--operation mode is output
+
+RS232_TX = OUTPUT(GND);
+
+
+--RS232_RTS is RS232_RTS at PIN_175
+--operation mode is output
+
+RS232_RTS = OUTPUT(GND);
+
+
+--MATRIX_ROW[7] is MATRIX_ROW[7] at PIN_134
+--operation mode is output
+
+MATRIX_ROW[7] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[6] is MATRIX_ROW[6] at PIN_136
+--operation mode is output
+
+MATRIX_ROW[6] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[5] is MATRIX_ROW[5] at PIN_137
+--operation mode is output
+
+MATRIX_ROW[5] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[4] is MATRIX_ROW[4] at PIN_138
+--operation mode is output
+
+MATRIX_ROW[4] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[3] is MATRIX_ROW[3] at PIN_139
+--operation mode is output
+
+MATRIX_ROW[3] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[2] is MATRIX_ROW[2] at PIN_141
+--operation mode is output
+
+MATRIX_ROW[2] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[1] is MATRIX_ROW[1] at PIN_142
+--operation mode is output
+
+MATRIX_ROW[1] = OUTPUT(VCC);
+
+
+--MATRIX_ROW[0] is MATRIX_ROW[0] at PIN_143
+--operation mode is output
+
+MATRIX_ROW[0] = OUTPUT(VCC);
+
+
+--MATRIX_COL[15] is MATRIX_COL[15] at PIN_118
+--operation mode is output
+
+MATRIX_COL[15] = OUTPUT(VCC);
+
+
+--MATRIX_COL[14] is MATRIX_COL[14] at PIN_119
+--operation mode is output
+
+MATRIX_COL[14] = OUTPUT(VCC);
+
+
+--MATRIX_COL[13] is MATRIX_COL[13] at PIN_128
+--operation mode is output
+
+MATRIX_COL[13] = OUTPUT(VCC);
+
+
+--MATRIX_COL[12] is MATRIX_COL[12] at PIN_129
+--operation mode is output
+
+MATRIX_COL[12] = OUTPUT(VCC);
+
+
+--MATRIX_COL[11] is MATRIX_COL[11] at PIN_131
+--operation mode is output
+
+MATRIX_COL[11] = OUTPUT(VCC);
+
+
+--MATRIX_COL[10] is MATRIX_COL[10] at PIN_127
+--operation mode is output
+
+MATRIX_COL[10] = OUTPUT(VCC);
+
+
+--MATRIX_COL[9] is MATRIX_COL[9] at PIN_120
+--operation mode is output
+
+MATRIX_COL[9] = OUTPUT(VCC);
+
+
+--MATRIX_COL[8] is MATRIX_COL[8] at PIN_126
+--operation mode is output
+
+MATRIX_COL[8] = OUTPUT(VCC);
+
+
+--MATRIX_COL[7] is MATRIX_COL[7] at PIN_109
+--operation mode is output
+
+MATRIX_COL[7] = OUTPUT(VCC);
+
+
+--MATRIX_COL[6] is MATRIX_COL[6] at PIN_110
+--operation mode is output
+
+MATRIX_COL[6] = OUTPUT(VCC);
+
+
+--MATRIX_COL[5] is MATRIX_COL[5] at PIN_115
+--operation mode is output
+
+MATRIX_COL[5] = OUTPUT(VCC);
+
+
+--MATRIX_COL[4] is MATRIX_COL[4] at PIN_116
+--operation mode is output
+
+MATRIX_COL[4] = OUTPUT(VCC);
+
+
+--MATRIX_COL[3] is MATRIX_COL[3] at PIN_117
+--operation mode is output
+
+MATRIX_COL[3] = OUTPUT(VCC);
+
+
+--MATRIX_COL[2] is MATRIX_COL[2] at PIN_114
+--operation mode is output
+
+MATRIX_COL[2] = OUTPUT(VCC);
+
+
+--MATRIX_COL[1] is MATRIX_COL[1] at PIN_111
+--operation mode is output
+
+MATRIX_COL[1] = OUTPUT(VCC);
+
+
+--MATRIX_COL[0] is MATRIX_COL[0] at PIN_113
+--operation mode is output
+
+MATRIX_COL[0] = OUTPUT(VCC);
+
+
+--FLEX_MOUSE_CLK is FLEX_MOUSE_CLK at PIN_30
+--operation mode is bidir
+
+FLEX_MOUSE_CLK_tri_out = TRI(GND, GND);
+FLEX_MOUSE_CLK = BIDIR(FLEX_MOUSE_CLK_tri_out);
+
+
+--FLEX_MOUSE_DATA is FLEX_MOUSE_DATA at PIN_31
+--operation mode is bidir
+
+FLEX_MOUSE_DATA_tri_out = TRI(GND, GND);
+FLEX_MOUSE_DATA = BIDIR(FLEX_MOUSE_DATA_tri_out);
+
+
+--PS2_DATA is PS2_DATA at PIN_184
+--operation mode is bidir
+
+PS2_DATA_tri_out = TRI(GND, GND);
+PS2_DATA = BIDIR(PS2_DATA_tri_out);
+
+
+--PS2_CLK is PS2_CLK at PIN_185
+--operation mode is bidir
+
+PS2_CLK_tri_out = TRI(GND, GND);
+PS2_CLK = BIDIR(PS2_CLK_tri_out);
+
+

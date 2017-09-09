@@ -1,0 +1,14 @@
+module prescaler(
+	input clkin,
+	output clkout
+);
+reg [31:0] cntr;
+always@(posedge clkin)
+begin
+if(cntr < 25175000)
+cntr <= cntr + 1;
+else
+cntr <= 0;
+end
+assign clkout = cntr[24];
+endmodule

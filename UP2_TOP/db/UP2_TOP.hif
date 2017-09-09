@@ -1,0 +1,63 @@
+Version 4.1 Build 208 09/10/2004 Service Pack 2 SJ Web Edition
+17
+OFF
+OFF
+OFF
+OFF
+0
+# entity
+dek7seg
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+dek7seg.v
+1449831950
+7
+# storage
+db|UP2_TOP.(1).cnf
+db|UP2_TOP.(1).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+VHDL_VERILOG_BREAK_LOOPS
+OFF
+}
+# end
+# entity
+prescaler
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+prescaler.v
+1449833761
+7
+# storage
+db|UP2_TOP.(2).cnf
+db|UP2_TOP.(2).cnf
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+PRESERVE_REGISTER
+OFF
+DUP_REG_EXTRACTION
+ON
+DUP_LOGIC_EXTRACTION
+ON
+VHDL_VERILOG_BREAK_LOOPS
+OFF
+}
+# end
+# complete
+

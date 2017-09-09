@@ -1,0 +1,250 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+18
+1161
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+UP2_TOP
+# storage
+db|UP2_TOP.(0).cnf
+db|UP2_TOP.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+UP2_TOP.v
+d0e68378a9aeb1c29c9252d3773da64
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+start
+# storage
+db|UP2_TOP.(1).cnf
+db|UP2_TOP.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+start.v
+2dcd797c0488df3c9b320f128fe7
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+start:s1
+}
+# macro_sequence
+
+# end
+# entity
+regD
+# storage
+db|UP2_TOP.(2).cnf
+db|UP2_TOP.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+regD.v
+10faf1c613fc8b83e8879940acd46c9c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+start:s1|regD:Q1
+start:s1|regD:Q0
+tile:t1|regD:Q1
+tile:t1|regD:Q0
+tile:t2|regD:Q1
+tile:t2|regD:Q0
+tile:t3|regD:Q1
+tile:t3|regD:Q0
+tile:t4|regD:Q1
+tile:t4|regD:Q0
+tile:t5|regD:Q1
+tile:t5|regD:Q0
+tile:t6|regD:Q1
+tile:t6|regD:Q0
+tile:t7|regD:Q1
+tile:t7|regD:Q0
+tile:t8|regD:Q1
+tile:t8|regD:Q0
+tile:t9|regD:Q1
+tile:t9|regD:Q0
+tile:t10|regD:Q1
+tile:t10|regD:Q0
+tile:t11|regD:Q1
+tile:t11|regD:Q0
+tile:t12|regD:Q1
+tile:t12|regD:Q0
+tile:t13|regD:Q1
+tile:t13|regD:Q0
+tile:t14|regD:Q1
+tile:t14|regD:Q0
+tile:t15|regD:Q1
+tile:t15|regD:Q0
+}
+# macro_sequence
+
+# end
+# entity
+tile
+# storage
+db|UP2_TOP.(3).cnf
+db|UP2_TOP.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+tile.v
+3cc131fcc8b7bba779c1e1d5a48b98c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+tile:t1
+tile:t2
+tile:t3
+tile:t4
+tile:t5
+tile:t6
+tile:t7
+tile:t8
+tile:t9
+tile:t10
+tile:t11
+tile:t12
+tile:t13
+tile:t14
+tile:t15
+}
+# macro_sequence
+
+# end
+# entity
+dek7seg
+# storage
+db|UP2_TOP.(4).cnf
+db|UP2_TOP.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+dek7seg.v
+2dc9b577119add99c8fb6cc3ab549bd
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+dek7seg:d1
+dek7seg:d2
+dek7seg:d3
+dek7seg:d4
+}
+# macro_sequence
+
+# end
+# complete
+

@@ -1,0 +1,535 @@
+|UP2_TOP
+SW[0] => SW[0]~1.IN16
+SW[1] => SW[1]~0.IN16
+DISP1[0] <= dek7seg:d4.seg
+DISP1[1] <= dek7seg:d4.seg
+DISP1[2] <= dek7seg:d4.seg
+DISP1[3] <= dek7seg:d4.seg
+DISP1[4] <= dek7seg:d4.seg
+DISP1[5] <= dek7seg:d4.seg
+DISP1[6] <= dek7seg:d4.seg
+DISP2[0] <= dek7seg:d3.seg
+DISP2[1] <= dek7seg:d3.seg
+DISP2[2] <= dek7seg:d3.seg
+DISP2[3] <= dek7seg:d3.seg
+DISP2[4] <= dek7seg:d3.seg
+DISP2[5] <= dek7seg:d3.seg
+DISP2[6] <= dek7seg:d3.seg
+DISP3[0] <= dek7seg:d2.seg
+DISP3[1] <= dek7seg:d2.seg
+DISP3[2] <= dek7seg:d2.seg
+DISP3[3] <= dek7seg:d2.seg
+DISP3[4] <= dek7seg:d2.seg
+DISP3[5] <= dek7seg:d2.seg
+DISP3[6] <= dek7seg:d2.seg
+DISP4[0] <= dek7seg:d1.seg
+DISP4[1] <= dek7seg:d1.seg
+DISP4[2] <= dek7seg:d1.seg
+DISP4[3] <= dek7seg:d1.seg
+DISP4[4] <= dek7seg:d1.seg
+DISP4[5] <= dek7seg:d1.seg
+DISP4[6] <= dek7seg:d1.seg
+DISP4_DP <= tile:t15.carry
+
+
+|UP2_TOP|start:s1
+clock => clock~0.IN2
+set => set~0.IN2
+sum <= sum~reg0.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|start:s1|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|start:s1|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t1
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t1|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t1|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t2
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t2|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t2|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t3
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t3|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t3|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|dek7seg:d1
+data_in[0] => Decoder0.IN3
+data_in[1] => Decoder0.IN2
+data_in[2] => Decoder0.IN1
+data_in[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t4
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t4|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t4|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t5
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t5|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t5|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t6
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t6|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t6|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t7
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t7|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t7|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|dek7seg:d2
+data_in[0] => Decoder0.IN3
+data_in[1] => Decoder0.IN2
+data_in[2] => Decoder0.IN1
+data_in[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t8
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t8|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t8|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t9
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t9|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t9|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t10
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t10|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t10|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t11
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t11|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t11|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|dek7seg:d3
+data_in[0] => Decoder0.IN3
+data_in[1] => Decoder0.IN2
+data_in[2] => Decoder0.IN1
+data_in[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t12
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t12|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t12|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t13
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t13|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t13|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t14
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t14|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t14|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t15
+sum <= sum~2.DB_MAX_OUTPUT_PORT_TYPE
+carry <= carry~4.DB_MAX_OUTPUT_PORT_TYPE
+reset => reset~0.IN2
+clk => clk~0.IN2
+prevCarry => carry~3.IN1
+prevCarry => carry~0.IN1
+prevCarry => sum~1.IN0
+
+
+|UP2_TOP|tile:t15|regD:Q1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|tile:t15|regD:Q0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+reset => q~0.IN0
+set => q~0.IN1
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|UP2_TOP|dek7seg:d4
+data_in[0] => Decoder0.IN3
+data_in[1] => Decoder0.IN2
+data_in[2] => Decoder0.IN1
+data_in[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
